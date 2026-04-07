@@ -12,6 +12,11 @@ export const metadata: Metadata = {
     title: "About Stem",
     description: "Built to help African fintech and financial-services teams move with clarity in fast-moving markets.",
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "About Stem",
+    description: "Built to help African fintech and financial-services teams move with clarity in fast-moving markets.",
+  },
 };
 
 const PRINCIPLES = [
@@ -133,7 +138,7 @@ export default function AboutPage() {
           <div className="max-w-3xl">
             <SectionLabel>Founding Team</SectionLabel>
             <h2 className="text-4xl font-bold tracking-[-0.04em] text-deep-ink sm:text-5xl">
-              The people building Stem-coge.
+              The people building Stem.
             </h2>
             <p className="mt-6 text-lg leading-8 text-slate-600">
               Stem-cogent is being shaped by a small founding team focused on one thing: giving financial teams a clearer way to understand market change and make better decisions faster.
@@ -146,7 +151,7 @@ export default function AboutPage() {
                 key={member.name}
                 className={`overflow-hidden rounded-[32px] border border-slate-200 shadow-[0_18px_44px_rgba(15,23,42,0.06)] ${member.accent}`}
               >
-                <div className="relative aspect-[4/3] overflow-hidden bg-[#eaf0fb]">
+                <div className="relative h-64 overflow-hidden bg-[#eaf0fb] sm:h-72">
                   <Image
                     src={member.image}
                     alt={`${member.name} portrait`}
@@ -235,6 +240,6 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
-    </main>
+    </div>
   );
 }

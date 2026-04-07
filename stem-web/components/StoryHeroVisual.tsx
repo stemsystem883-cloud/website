@@ -80,7 +80,7 @@ export function StoryHeroVisual() {
   return (
     <div
       ref={containerRef}
-      className="relative mx-auto w-full max-w-[600px] overflow-hidden rounded-[30px] border border-slate-200/80 bg-[linear-gradient(135deg,#fbfcff_0%,#eef4ff_38%,#f8fafc_100%)] p-5 shadow-[0_28px_90px_rgba(15,23,42,0.08)] sm:p-6 lg:max-w-none lg:p-7"
+      className="relative mx-auto w-full max-w-[600px] overflow-hidden rounded-[30px] border border-slate-200/80 bg-[linear-gradient(135deg,#fbfcff_0%,#eef4ff_38%,#f8fafc_100%)] p-5 shadow-[0_28px_90px_rgba(15,23,42,0.08)] sm:p-6 lg:max-w-full lg:p-7"
     >
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(53,99,235,0.15),transparent_35%),radial-gradient(circle_at_bottom_right,rgba(15,23,42,0.08),transparent_32%)]" />
       <div className="absolute inset-0 opacity-35 [background-image:linear-gradient(rgba(148,163,184,0.12)_1px,transparent_1px),linear-gradient(90deg,rgba(148,163,184,0.12)_1px,transparent_1px)] [background-size:36px_36px]" />
@@ -145,7 +145,7 @@ export function StoryHeroVisual() {
               className="absolute right-[65px] h-px bg-[linear-gradient(90deg,rgba(53,99,235,0.08),rgba(53,99,235,0.5))]"
               style={{
                 width: "calc(50% + 20px)",
-                top: `${12 + index * 15.5}%`,
+                top: `${22 + index * 14}%`,
               }}
             />
           ))}
@@ -157,7 +157,7 @@ export function StoryHeroVisual() {
               className="absolute left-[65px] h-px bg-[linear-gradient(90deg,rgba(53,99,235,0.5),rgba(53,99,235,0.08))]"
               style={{
                 width: "calc(50% + 20px)",
-                top: `${12 + index * 15.5}%`,
+                top: `${22 + index * 14}%`,
               }}
             />
           ))}

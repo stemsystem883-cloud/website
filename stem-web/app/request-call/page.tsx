@@ -4,6 +4,15 @@ import { CheckCircle2 } from "lucide-react";
 export const metadata: Metadata = {
   title: "Get Early Access | Stem",
   description: "Request early access to Stem and talk through your team's market intelligence needs.",
+  openGraph: {
+    title: "Get Early Access | Stem",
+    description: "Talk through your team's market intelligence needs and see how Stem can sharpen your decision workflow.",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Get Early Access | Stem",
+    description: "Talk through your team's market intelligence needs and see how Stem can sharpen your decision workflow.",
+  },
 };
 
 const EXPECTATIONS = [
@@ -132,7 +141,7 @@ export default function RequestCallPage() {
               />
             </div>
 
-            <button type="button" className="btn-primary w-full justify-center">
+            <button type="submit" className="btn-primary w-full justify-center">
               Submit request
             </button>
             <p className="text-center text-xs leading-6 text-slate-500">
@@ -141,6 +150,6 @@ export default function RequestCallPage() {
           </form>
         </div>
       </div>
-    </main>
+    </div>
   );
 }

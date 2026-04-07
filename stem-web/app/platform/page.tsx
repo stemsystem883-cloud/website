@@ -61,14 +61,14 @@ export default function PlatformPage() {
     <div className="flex-1 bg-[#fbfcff]">
       <section className="relative overflow-hidden px-6 py-20 sm:py-24 lg:px-8 lg:py-28">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(53,99,235,0.12),transparent_30%),linear-gradient(180deg,#ffffff_0%,#f6f9ff_100%)]" />
-        <div className="relative mx-auto grid max-w-[1280px] gap-12 lg:grid-cols-[minmax(0,1fr)_minmax(500px,580px)] lg:items-center">
+        <div className="relative mx-auto grid max-w-[1280px] gap-12 lg:grid-cols-2 lg:items-center">
           <div className="max-w-2xl">
             <SectionLabel>Platform</SectionLabel>
             <h1 className="text-5xl font-bold tracking-[-0.04em] text-deep-ink sm:text-6xl lg:text-[4.2rem] lg:leading-[1.04]">
               A clearer system for understanding market change.
             </h1>
             <p className="mt-6 text-lg leading-8 text-slate-600 sm:text-xl">
-              Stem helps fintech and financial, teams keep up with what is changing, understand what matters faster, and move from scattered information to clearer decisions.
+              Stem helps fintech and financial teams keep up with what is changing, understand what matters faster, and move from scattered information to clearer decisions.
             </p>
             <div className="mt-8 flex flex-col gap-4 sm:flex-row">
               <Link href="/request-call" className="btn-primary">
@@ -117,7 +117,7 @@ export default function PlatformPage() {
               A simple path from raw change to usable clarity.
             </h2>
             <p className="mt-6 text-lg leading-8 text-slate-600">
-              Stem is not complex machine that you have to decode. It a platform that you can trust.
+              Stem is not a complex machine that you have to decode. It is a platform that you can trust.
             </p>
           </div>
           <div className="space-y-4">

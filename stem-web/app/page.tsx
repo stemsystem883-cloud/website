@@ -214,7 +214,7 @@ export default function Home() {
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(53,99,235,0.14),transparent_34%),radial-gradient(circle_at_85%_12%,rgba(15,23,42,0.06),transparent_20%),linear-gradient(180deg,#ffffff_0%,#f7faff_100%)]" />
         <div className="absolute inset-0 opacity-40 [background-image:linear-gradient(rgba(148,163,184,0.10)_1px,transparent_1px),linear-gradient(90deg,rgba(148,163,184,0.10)_1px,transparent_1px)] [background-size:40px_40px]" />
 
-        <div className="relative mx-auto grid w-full max-w-[1280px] gap-12 lg:grid-cols-[minmax(0,1fr)_minmax(500px,580px)] lg:items-center lg:gap-14">
+        <div className="relative mx-auto grid w-full max-w-[1280px] gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)] lg:items-center lg:gap-12 xl:grid-cols-[minmax(0,1fr)_minmax(0,560px)]">
           <div className="max-w-2xl" data-story-reveal>
             <SectionLabel>For Financial Teams In Fast-Moving Markets</SectionLabel>
             <h1 className="max-w-[13ch] text-5xl font-bold tracking-[-0.04em] text-deep-ink sm:text-6xl lg:text-[4.6rem] lg:leading-[1.02]">

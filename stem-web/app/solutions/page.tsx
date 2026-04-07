@@ -42,7 +42,7 @@ export default function SolutionsPage() {
     <div className="flex-1 bg-[#fbfcff]">
       <section className="relative overflow-hidden px-6 py-20 sm:py-24 lg:px-8 lg:py-28">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(53,99,235,0.12),transparent_30%),linear-gradient(180deg,#ffffff_0%,#f7faff_100%)]" />
-        <div className="relative mx-auto grid max-w-[1280px] gap-12 lg:grid-cols-[minmax(0,1fr)_minmax(500px,560px)] lg:items-center">
+          <div className="relative mx-auto grid max-w-[1280px] gap-12 lg:grid-cols-2 lg:items-center">
           <div className="max-w-2xl">
             <SectionLabel>Solutions</SectionLabel>
             <h1 className="text-5xl font-bold tracking-[-0.04em] text-deep-ink sm:text-6xl lg:text-[4.2rem] lg:leading-[1.04]">
