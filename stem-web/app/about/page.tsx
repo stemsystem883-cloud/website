@@ -1,0 +1,240 @@
+import type { Metadata } from "next";
+import Image from "next/image";
+import Link from "next/link";
+import { ArrowRight, CheckCircle2, ExternalLink, Mail, Shield, Sparkles } from "lucide-react";
+import teamMemberOne from "../../team/pf.jpg";
+import teamMemberTwo from "../../team/2_gift~3.jpg";
+
+export const metadata: Metadata = {
+  title: "About | Stem Decision Intelligence",
+  description: "Learn about Stem — built to help African fintech and financial-services teams move with clarity in fast-moving markets.",
+  openGraph: {
+    title: "About Stem",
+    description: "Built to help African fintech and financial-services teams move with clarity in fast-moving markets.",
+  },
+};
+
+const PRINCIPLES = [
+  {
+    title: "Clarity over noise",
+    body: "You or your teams do not need more scattered information. They need a better way to understand what matters.",
+  },
+  {
+    title: "Calm product design",
+    body: "Stem-cogent helps decisions makers and teams think more clearly under pressure, not overwhelm them with unnecessary complexity.",
+  },
+  {
+    title: "Useful before impressive",
+    body: "Designed for helping decisions makers and teams make real decisions faster, less guesswork and less labour.",
+  },
+  {
+    title: "Trust through restraint",
+    body: "We would rather make grounded claims and build something genuinely useful than hide behind hype or technical theater.",
+  },
+];
+
+const TEAM_MEMBERS = [
+  {
+    image: teamMemberOne,
+    name: "Odion O. Alex",
+    label: "Founding team",
+    role: "Co-Founder and CEO",
+    body: "An entrepreneur, AI engineer, and innovative builder driven by a passion to create intelligent systems that strengthen and improve the ecosystem around them.",
+    objectPosition: "50% 16%",
+    accent: "bg-[linear-gradient(180deg,#edf6ff_0%,#f7f9fc_100%)]",
+  },
+  {
+    image: teamMemberTwo,
+    name: "Gift Chinedu Nduka",
+    label: "Founding team",
+    role: "Co-Founder and CSO",
+    body: "A strategic operator with the skills to build and scale businesses, focused on shaping a sharper commercial direction for Stem and the teams it serves.",
+    objectPosition: "50% 20%",
+    accent: "bg-[linear-gradient(180deg,#fff3f1_0%,#f7f9fc_100%)]",
+  },
+];
+
+function SectionLabel({ children }: { children: React.ReactNode }) {
+  return <p className="mb-4 text-xs font-semibold uppercase tracking-[0.28em] text-primary-blue/70">{children}</p>;
+}
+
+export default function AboutPage() {
+  return (
+    <div className="flex-1 bg-[#fbfcff]">
+      <section className="relative overflow-hidden px-6 py-20 sm:py-24 lg:px-8 lg:py-28">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(53,99,235,0.12),transparent_30%),linear-gradient(180deg,#ffffff_0%,#f7faff_100%)]" />
+        <div className="relative mx-auto max-w-[980px] text-center">
+          <SectionLabel>About Stem-Cogent</SectionLabel>
+          <h1 className="text-5xl font-bold tracking-[-0.04em] text-deep-ink sm:text-6xl lg:text-[4.2rem] lg:leading-[1.04]">
+            Built for decision makers and teams making important decisions in companies and fast-moving markets.
+          </h1>
+          <p className="mx-auto mt-6 max-w-[46ch] text-lg leading-8 text-slate-600 sm:text-xl">
+            Stem-cogent exists to help fintech and financial teams reduce blind spots, cut through fragmented signals, and make business decisions with more confidence.
+          </p>
+        </div>
+      </section>
+
+      <section className="bg-white px-6 py-20 sm:py-24 lg:px-8 lg:py-28">
+        <div className="mx-auto grid max-w-[1280px] gap-8 lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)] lg:items-start">
+          <div className="rounded-[30px] border border-slate-200 bg-[linear-gradient(180deg,#ffffff_0%,#f7f9fc_100%)] p-7 shadow-[0_18px_44px_rgba(15,23,42,0.06)]">
+            <SectionLabel>Why We Built Stem-cogent</SectionLabel>
+            <h2 className="text-4xl font-bold tracking-[-0.04em] text-deep-ink sm:text-5xl">
+              Important market decisions are still made with incomplete visibility.
+            </h2>
+            <div className="mt-6 space-y-5 text-base leading-8 text-slate-600">
+              <p>
+                Strategy, growth, and leadership teams often work across fragmented market information. Signals live in different places, change at different speeds, and rarely arrive in a form that is easy to discuss.
+              </p>
+              <p>
+                We built Stem-cogent because more raw information is not the answer. Leaders, innovative teams need usable clarity. They need to know what changed, why it matters, and what deserves attention now.
+              </p>
+            </div>
+          </div>
+
+          <div className="rounded-[30px] border border-primary-blue/15 bg-[linear-gradient(180deg,#ffffff_0%,#eef4ff_100%)] p-7 shadow-[0_18px_44px_rgba(53,99,235,0.10)]">
+            <SectionLabel>What We Are Trying To Build</SectionLabel>
+            <div className="space-y-4">
+              {[
+                "A clearer way to keep up with market change.",
+                "A more useful view of what matters and why.",
+                "A calmer foundation for difficult business decisions.",
+              ].map((item) => (
+                <div key={item} className="flex gap-3 rounded-2xl border border-white bg-white/80 px-4 py-4 shadow-sm">
+                  <CheckCircle2 className="mt-0.5 h-5 w-5 flex-shrink-0 text-primary-blue" />
+                  <p className="text-sm font-medium leading-7 text-slate-700">{item}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-[#0f172a] px-6 py-20 text-white sm:py-24 lg:px-8 lg:py-28">
+        <div className="mx-auto max-w-[1280px]">
+          <div className="max-w-3xl">
+            <SectionLabel>Principles</SectionLabel>
+            <h2 className="text-4xl font-bold tracking-[-0.04em] sm:text-5xl">
+              The ideas shaping the product and the company.
+            </h2>
+          </div>
+          <div className="mt-12 grid gap-6 md:grid-cols-2">
+            {PRINCIPLES.map((item) => (
+              <div key={item.title} className="rounded-[28px] border border-white/10 bg-white/6 p-6 shadow-[0_18px_44px_rgba(2,6,23,0.16)] backdrop-blur">
+                <h3 className="text-2xl font-semibold text-white">{item.title}</h3>
+                <p className="mt-3 text-sm leading-7 text-slate-300">{item.body}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-white px-6 py-20 sm:py-24 lg:px-8 lg:py-28">
+        <div className="mx-auto max-w-[1280px]">
+          <div className="max-w-3xl">
+            <SectionLabel>Founding Team</SectionLabel>
+            <h2 className="text-4xl font-bold tracking-[-0.04em] text-deep-ink sm:text-5xl">
+              The people building Stem-coge.
+            </h2>
+            <p className="mt-6 text-lg leading-8 text-slate-600">
+              Stem-cogent is being shaped by a small founding team focused on one thing: giving financial teams a clearer way to understand market change and make better decisions faster.
+            </p>
+          </div>
+
+          <div className="mt-12 grid gap-6 lg:grid-cols-2">
+            {TEAM_MEMBERS.map((member) => (
+              <article
+                key={member.name}
+                className={`overflow-hidden rounded-[32px] border border-slate-200 shadow-[0_18px_44px_rgba(15,23,42,0.06)] ${member.accent}`}
+              >
+                <div className="relative aspect-[4/3] overflow-hidden bg-[#eaf0fb]">
+                  <Image
+                    src={member.image}
+                    alt={`${member.name} portrait`}
+                    fill
+                    sizes="(min-width: 1024px) 42vw, 100vw"
+                    className="object-cover"
+                    style={{ objectPosition: member.objectPosition }}
+                  />
+                  <div className="absolute inset-x-0 bottom-0 h-36 bg-gradient-to-t from-[#0f172a]/24 via-[#0f172a]/8 to-transparent" />
+                </div>
+                <div className="p-6 sm:p-7">
+                  <p className="text-[10px] font-semibold uppercase tracking-[0.26em] text-primary-blue/70">
+                    {member.label}
+                  </p>
+                  <h3 className="mt-3 text-2xl font-semibold text-deep-ink">{member.name}</h3>
+                  <p className="mt-1 text-sm font-medium uppercase tracking-[0.18em] text-slate-500">{member.role} at Stem</p>
+                  <p className="mt-4 text-sm leading-7 text-slate-600">{member.body}</p>
+                  <div className="mt-6 flex flex-wrap gap-3">
+                    <a
+                      href="https://linkedin.com/in/placeholder"
+                      target="_blank"
+                      rel="noreferrer"
+                      className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white/80 px-4 py-2 text-sm font-medium text-slate-700 transition-colors hover:border-primary-blue/30 hover:text-primary-blue"
+                    >
+                      <ExternalLink className="h-4 w-4" />
+                      LinkedIn
+                    </a>
+                    <a
+                      href="mailto:placeholder@stem.africa"
+                      className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white/80 px-4 py-2 text-sm font-medium text-slate-700 transition-colors hover:border-primary-blue/30 hover:text-primary-blue"
+                    >
+                      <Mail className="h-4 w-4" />
+                      Email
+                    </a>
+                  </div>
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-white px-6 py-20 sm:py-24 lg:px-8 lg:py-28">
+        <div className="mx-auto grid max-w-[1280px] gap-8 lg:grid-cols-[minmax(0,1fr)_minmax(0,0.9fr)] lg:items-center">
+          <div>
+            <SectionLabel>Early Rollout</SectionLabel>
+            <h2 className="text-4xl font-bold tracking-[-0.04em] text-deep-ink sm:text-5xl">
+              Built for a real problem teams face every day.
+            </h2>
+            <p className="mt-6 max-w-[48ch] text-lg leading-8 text-slate-600">
+              We&apos;re currently speaking with a small number of teams ahead of public launch. That early work is shaping the product toward clarity, usefulness, and trust.
+            </p>
+          </div>
+          <div className="rounded-[30px] border border-slate-200 bg-[linear-gradient(180deg,#ffffff_0%,#f7f9fc_100%)] p-7 shadow-[0_18px_44px_rgba(15,23,42,0.06)]">
+            <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-primary-blue/10 text-primary-blue">
+              <Sparkles className="h-5 w-5" />
+            </div>
+            <h3 className="mt-5 text-2xl font-semibold text-deep-ink">What matters right now</h3>
+            <p className="mt-3 text-sm leading-7 text-slate-600">
+              A sharper product for real teams. Grounded claims. Clearer decisions. Less wasted effort.
+            </p>
+            <div className="mt-6 rounded-2xl border border-slate-200 bg-white px-4 py-4">
+              <div className="flex items-start gap-3">
+                <Shield className="mt-0.5 h-5 w-5 text-primary-blue" />
+                <p className="text-sm font-medium leading-7 text-slate-700">
+                  We are deliberately building trust through focus, product clarity, and honest positioning rather than inflated claims.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-[#0f172a] px-6 py-20 text-white sm:py-24 lg:px-8 lg:py-28">
+        <div className="mx-auto max-w-[840px] text-center">
+          <h2 className="text-4xl font-bold tracking-[-0.04em] sm:text-5xl">
+            See how Stem could support your team&apos;s decision environment.
+          </h2>
+          <div className="mt-8 flex flex-col justify-center gap-4 sm:flex-row">
+            <Link href="/request-call" className="btn-primary">
+              Get early access <ArrowRight className="h-4 w-4" />
+            </Link>
+            <Link href="/platform" className="btn-secondary">
+              Explore the platform
+            </Link>
+          </div>
+        </div>
+      </section>
+    </main>
+  );
+}
