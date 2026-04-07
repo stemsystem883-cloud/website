@@ -151,41 +151,51 @@ export default function AboutPage() {
                 key={member.name}
                 className={`overflow-hidden rounded-[32px] border border-slate-200 shadow-[0_18px_44px_rgba(15,23,42,0.06)] ${member.accent}`}
               >
-                <div className="relative h-64 overflow-hidden bg-[#eaf0fb] sm:h-72">
-                  <Image
-                    src={member.image}
-                    alt={`${member.name} portrait`}
-                    fill
-                    sizes="(min-width: 1024px) 42vw, 100vw"
-                    className="object-cover"
-                    style={{ objectPosition: member.objectPosition }}
-                  />
-                  <div className="absolute inset-x-0 bottom-0 h-36 bg-gradient-to-t from-[#0f172a]/24 via-[#0f172a]/8 to-transparent" />
-                </div>
-                <div className="p-6 sm:p-7">
-                  <p className="text-[10px] font-semibold uppercase tracking-[0.26em] text-primary-blue/70">
-                    {member.label}
-                  </p>
-                  <h3 className="mt-3 text-2xl font-semibold text-deep-ink">{member.name}</h3>
-                  <p className="mt-1 text-sm font-medium uppercase tracking-[0.18em] text-slate-500">{member.role} at Stem</p>
-                  <p className="mt-4 text-sm leading-7 text-slate-600">{member.body}</p>
-                  <div className="mt-6 flex flex-wrap gap-3">
-                    <a
-                      href="https://linkedin.com/in/placeholder"
-                      target="_blank"
-                      rel="noreferrer"
-                      className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white/80 px-4 py-2 text-sm font-medium text-slate-700 transition-colors hover:border-primary-blue/30 hover:text-primary-blue"
-                    >
-                      <ExternalLink className="h-4 w-4" />
-                      LinkedIn
-                    </a>
-                    <a
-                      href="mailto:placeholder@stem.africa"
-                      className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white/80 px-4 py-2 text-sm font-medium text-slate-700 transition-colors hover:border-primary-blue/30 hover:text-primary-blue"
-                    >
-                      <Mail className="h-4 w-4" />
-                      Email
-                    </a>
+                {/* Horizontal layout: image left, info right */}
+                <div className="flex flex-col sm:flex-row sm:items-stretch">
+                  {/* Image — fixed width on sm+, full width on mobile */}
+                  <div className="relative h-56 w-full shrink-0 overflow-hidden bg-[#eaf0fb] sm:h-auto sm:w-[200px]">
+                    <Image
+                      src={member.image}
+                      alt={`${member.name} portrait`}
+                      fill
+                      sizes="(min-width: 640px) 200px, 100vw"
+                      className="object-cover"
+                      style={{ objectPosition: member.objectPosition }}
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent sm:bg-gradient-to-r sm:from-transparent sm:via-transparent sm:to-black/10" />
+                  </div>
+
+                  {/* Info */}
+                  <div className="flex flex-1 flex-col justify-center gap-3 p-6">
+                    <p className="text-[10px] font-semibold uppercase tracking-[0.26em] text-primary-blue/70">
+                      {member.label}
+                    </p>
+                    <div>
+                      <h3 className="text-xl font-semibold text-deep-ink">{member.name}</h3>
+                      <p className="mt-0.5 text-xs font-medium uppercase tracking-[0.16em] text-slate-500">
+                        {member.role} at Stem
+                      </p>
+                    </div>
+                    <p className="text-sm leading-6 text-slate-600">{member.body}</p>
+                    <div className="flex flex-wrap gap-2 pt-1">
+                      <a
+                        href="https://linkedin.com/in/placeholder"
+                        target="_blank"
+                        rel="noreferrer"
+                        className="inline-flex items-center gap-1.5 rounded-full border border-slate-200 bg-white/80 px-3 py-1.5 text-xs font-medium text-slate-700 transition-colors hover:border-primary-blue/30 hover:text-primary-blue"
+                      >
+                        <ExternalLink className="h-3.5 w-3.5" />
+                        LinkedIn
+                      </a>
+                      <a
+                        href="mailto:placeholder@stem.africa"
+                        className="inline-flex items-center gap-1.5 rounded-full border border-slate-200 bg-white/80 px-3 py-1.5 text-xs font-medium text-slate-700 transition-colors hover:border-primary-blue/30 hover:text-primary-blue"
+                      >
+                        <Mail className="h-3.5 w-3.5" />
+                        Email
+                      </a>
+                    </div>
                   </div>
                 </div>
               </article>
