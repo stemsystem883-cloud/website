@@ -4,6 +4,7 @@ import "./globals.css";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { CursorFollower } from "@/components/CursorFollower";
+import { Analytics } from "@vercel/analytics/react";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -24,11 +25,11 @@ const dmSerifDisplay = DM_Serif_Display({
 export const metadata: Metadata = {
   metadataBase: new URL("https://stem.africa"),
   title: {
-    default: "Stem | Decision Intelligence for Fast-Moving Markets",
+    default: "Stem | Decision Intelligence",
     template: "%s | Stem",
   },
   description:
-    "Stem helps fintech and financial-services teams in Nigeria detect meaningful market changes early and act with more confidence, less guesswork, and less manual research.",
+    "Stem helps fintech and financial-services companies and teams in Nigeria detect meaningful market changes early and act with more confidence, less guesswork, and less manual research.",
   keywords: [
     "decision intelligence",
     "market intelligence",
@@ -49,14 +50,14 @@ export const metadata: Metadata = {
     locale: "en_NG",
     url: "https://stem.africa",
     siteName: "Stem",
-    title: "Stem | Decision Intelligence for Fast-Moving Markets",
+    title: "Stem | Decision Intelligence",
     description:
-      "Stem helps fintech and financial-services teams in Nigeria detect meaningful market changes early and act with more confidence.",
+      "Stem helps fintech and financial-services companies and teams in Nigeria detect meaningful market changes early and act with more confidence.",
     images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Stem – Decision Intelligence" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Stem | Decision Intelligence for Fast-Moving Markets",
+    title: "Stem | Decision Intelligence",
     description:
       "Detect meaningful market changes early and act with more confidence.",
     images: ["/og-image.png"],
@@ -76,8 +77,9 @@ export default function RootLayout({
       <body className="min-h-full flex flex-col selection:bg-primary-blue/10 selection:text-primary-blue">
         <CursorFollower />
         <Header />
-        <main className="flex-1">{children}</main>
+        <main className="flex-1 page-enter">{children}</main>
         <Footer />
+        <Analytics />
       </body>
     </html>
   );

@@ -1,7 +1,10 @@
 "use client";
 
-import { motion } from "framer-motion";
-import { ReactNode } from "react";
+import { useEffect, useRef, ReactNode } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 interface ScrollRevealProps {
   children: ReactNode;
@@ -18,72 +21,44 @@ export function ScrollReveal({
   delay = 0,
   direction = "up",
   distance = 30,
-  staggerChildren = false,
 }: ScrollRevealProps) {
-  const directions = {
-    up: { y: distance },
-    down: { y: -distance },
-    left: { x: distance },
-    right: { x: -distance },
-  };
+  const ref = useRef<HTMLDivElement>(null);
 
-  if (staggerChildren) {
-    return (
-      <motion.div
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, margin: "-50px" }}
-        variants={{
-          hidden: { opacity: 0 },
-          visible: {
-            opacity: 1,
-            transition: {
-              staggerChildren: 0.1,
-              delayChildren: delay,
-            },
-          },
-        }}
-        className={className}
-      >
-        {children}
-      </motion.div>
-    );
-  }
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+    const from: gsap.TweenVars = { opacity: 0 };
+    if (direction === "up") from.y = distance;
+    if (direction === "down") from.y = -distance;
+    if (direction === "left") from.x = distance;
+    if (direction === "right") from.x = -distance;
 
-  return (
-    <motion.div
-      initial={{ opacity: 0, ...directions[direction] }}
-      whileInView={{ opacity: 1, x: 0, y: 0 }}
-      viewport={{ once: true, margin: "-50px" }}
-      transition={{
-        duration: 0.8,
-        delay,
-        ease: [0.21, 0.47, 0.32, 0.98],
-      }}
-      className={className}
-    >
-      {children}
-    </motion.div>
-  );
+    const ctx = gsap.context(() => {
+      gsap.fromTo(el, from, {
+        opacity: 1, x: 0, y: 0,
+        duration: 0.85, delay,
+        ease: "power3.out",
+        scrollTrigger: { trigger: el, start: "top 86%", once: true },
+      });
+    });
+    return () => ctx.revert();
+  }, [delay, direction, distance]);
+
+  return <div ref={ref} className={className}>{children}</div>;
 }
 
-export function RevealItem({ children, distance = 20, className = "" }: { children: ReactNode; distance?: number; className?: string }) {
+export function RevealItem({
+  children,
+  distance = 20,
+  className = "",
+}: {
+  children: ReactNode;
+  distance?: number;
+  className?: string;
+}) {
   return (
-    <motion.div
-      className={className}
-      variants={{
-        hidden: { opacity: 0, y: distance },
-        visible: {
-          opacity: 1,
-          y: 0,
-          transition: {
-            duration: 0.5,
-            ease: [0.21, 0.47, 0.32, 0.98],
-          },
-        },
-      }}
-    >
+    <ScrollReveal distance={distance} className={className}>
       {children}
-    </motion.div>
+    </ScrollReveal>
   );
 }

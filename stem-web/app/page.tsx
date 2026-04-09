@@ -97,20 +97,28 @@ const AUDIENCES = [
   "Growth and expansion teams",
   "Founders and leadership",
   "Research and intelligence teams",
+  "Operation lead"
+];
+
+const SOCIAL_PROOF = [
+  "Early conversations with fintech and finance teams",
+  "Decision workflows mapped across strategy and growth roles",
+  "Built with direct founder and leadership feedback",
+  "Focused rollout designed for practical adoption",
 ];
 
 const TRUST_POINTS = [
   {
     title: "Clear problem focus",
-    body: "Built around a real challenge: financial teams trying to make important decisions with fragmented market information.",
+    body: "Built around a real challenge: companies, businesseses, teams trying to make important decisions with fragmented information, changes and unreliable information.",
   },
   {
     title: "Early rollout",
-    body: "We are speaking with a small number of teams ahead of public launch to make the product sharper, clearer, and more useful.",
+    body: "We are speaking with a small number of teams and individuals in cooperate organization with experience ahead of public launch to make the product sharper, clearer, and more useful.",
   },
   {
     title: "Calm product design",
-    body: "Everything is being designed to reduce noise, not add more of it. The product should help teams think better under pressure.",
+    body: "Everything is being designed to reduce noise, not add more of it. Stem-cogent is here to help think better under pressure.",
   },
 ];
 
@@ -216,12 +224,12 @@ export default function Home() {
 
         <div className="relative mx-auto grid w-full max-w-[1280px] gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)] lg:items-center lg:gap-12 xl:grid-cols-[minmax(0,1fr)_minmax(0,560px)]">
           <div className="max-w-2xl" data-story-reveal>
-            <SectionLabel>For Financial Teams In Fast-Moving Markets</SectionLabel>
+            <SectionLabel>For Fintech/Financial Companies and Teams In Fast-Moving Markets</SectionLabel>
             <h1 className="max-w-[13ch] text-5xl font-bold tracking-[-0.04em] text-deep-ink sm:text-6xl lg:text-[4.6rem] lg:leading-[1.02]">
               See what&apos;s changing in the market. Make better decisions faster.
             </h1>
             <p className="mt-6 max-w-[60ch] text-lg leading-8 text-slate-600 sm:text-xl">
-              Stem helps financial teams cut through scattered market information so they can understand what matters and act with more confidence.
+              Stem-cogent helps fintech/financial companies and teams cut through scattered market information so they can understand what matters and act with more confidence.
             </p>
 
             <div className="mt-8 flex flex-col gap-4 sm:flex-row">
@@ -255,6 +263,20 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="border-y border-slate-200/70 bg-white px-6 py-10 lg:px-8">
+        <div className="mx-auto grid max-w-[1280px] gap-4 md:grid-cols-2 lg:grid-cols-4">
+          {SOCIAL_PROOF.map((item) => (
+            <div
+              key={item}
+              data-story-reveal
+              className="rounded-2xl border border-slate-200 bg-[#f8faff] px-4 py-4 text-sm font-medium text-slate-700 shadow-sm"
+            >
+              {item}
+            </div>
+          ))}
+        </div>
+      </section>
+
       <section
         ref={problemSectionRef}
         className="relative overflow-hidden bg-[#f6f8fb] px-6 py-20 sm:py-24 lg:px-8 lg:py-28"
@@ -266,7 +288,7 @@ export default function Home() {
               Making important decisions is harder when the information is scattered.
             </h2>
             <p className="mt-6 text-lg leading-8 text-slate-600">
-              Financial teams often have to track market changes, competitors, and emerging risks across too many places. The result is slow research, unclear priorities, and too much guesswork around what matters and when to act.
+              Fintech/Financial companies and teams often have to track market changes, competitors, and emerging risks across too many places. The result is slow research, unclear priorities, and too much guesswork around what matters and when to act.
             </p>
 
             <div className="mt-8 space-y-4">
@@ -334,10 +356,10 @@ export default function Home() {
           <div className="max-w-3xl" data-story-reveal>
             <SectionLabel>The Solution</SectionLabel>
             <h2 className="text-4xl font-bold tracking-[-0.04em] text-white sm:text-5xl">
-              Stem helps your team see what matters faster.
+              Stem-cogent helps your team see what matters faster.
             </h2>
             <p className="mt-6 text-lg leading-8 text-slate-300">
-              Stem gives financial teams a clearer way to keep up with market changes, spot important shifts, and move from scattered information to clearer decisions.
+              Stem-cogent gives fintech/financial companies and teams a clearer way to keep up with market changes, spot important shifts, and move from scattered information to clearer decisions.
             </p>
           </div>
 
@@ -415,7 +437,7 @@ export default function Home() {
               Less guesswork. Faster decisions. More clarity.
             </h2>
             <p className="mt-6 text-lg leading-8 text-slate-600">
-              Stem helps teams spend less time chasing scattered information and more time making confident business decisions.
+              Stem-cogent helps companies and teams spend less time chasing scattered information and more time making confident business decisions.
             </p>
           </div>
 
@@ -458,10 +480,10 @@ export default function Home() {
           <div className="max-w-xl" data-story-reveal>
             <SectionLabel>Who It&apos;s For</SectionLabel>
             <h2 className="text-4xl font-bold tracking-[-0.04em] text-deep-ink sm:text-5xl">
-              For teams that need to understand the market before they move
+              For companies and teams also decision makers that need to understand the market before they move
             </h2>
             <p className="mt-6 text-lg leading-8 text-slate-600">
-              Stem is built for financial teams making strategy, growth, market, and leadership decisions in fast-moving environments.
+              Stem-cogent is built for fintech/financial companies and teams making strategy, growth, market, and leadership decisions in fast-moving environments.
             </p>
           </div>
 
@@ -507,16 +529,16 @@ export default function Home() {
           <div data-story-reveal className="rounded-[30px] border border-white/10 bg-white/6 p-7 shadow-[0_22px_60px_rgba(2,6,23,0.2)] backdrop-blur">
             <SectionLabel>Trust And Early Rollout</SectionLabel>
             <h2 className="text-4xl font-bold tracking-[-0.04em] text-white sm:text-5xl">
-              Built for a real problem teams face every day
+              Built for a real problem companies and teams face every day
             </h2>
             <p className="mt-6 text-lg leading-8 text-slate-300">
-              We&apos;re building Stem with a clear focus: helping financial teams understand what&apos;s changing in the market and make better decisions faster. We&apos;re currently in early rollout and speaking with a small number of teams ahead of public launch.
+              We&apos;re building Stem-cogent with a clear focus: helping fintech/financial companies and teams understand what&apos;s changing in the market and make better decisions faster. We&apos;re currently in early rollout and speaking with a small number of teams ahead of public launch.
             </p>
 
             <div className="mt-8 rounded-[26px] border border-white/10 bg-black/20 p-5">
               <p className="text-xs font-semibold uppercase tracking-[0.26em] text-blue-200/70">Founder note</p>
               <p className="mt-3 text-sm leading-7 text-slate-300">
-                The product should help teams think clearly under pressure. That is the standard behind the design, the messaging, and the product decisions we are making.
+                Stem-cogent is here to help companies and teams think clearly under pressure. See waht changing. Reduce guesswork. Know what matter. Less labor researching for data and information.
               </p>
             </div>
           </div>

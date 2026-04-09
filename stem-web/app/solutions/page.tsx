@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight, Compass, Shield, TrendingUp } from "lucide-react";
 import { FlowCanvas } from "@/components/FlowCanvas";
+import { PageReveal } from "@/components/PageReveal";
 
 export const metadata: Metadata = {
   title: "Solutions | Stem Decision Intelligence",
@@ -40,16 +41,17 @@ function SectionLabel({ children }: { children: React.ReactNode }) {
 export default function SolutionsPage() {
   return (
     <div className="flex-1 bg-[#fbfcff]">
+      <PageReveal />
       <section className="relative overflow-hidden px-6 py-20 sm:py-24 lg:px-8 lg:py-28">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(53,99,235,0.12),transparent_30%),linear-gradient(180deg,#ffffff_0%,#f7faff_100%)]" />
           <div className="relative mx-auto grid max-w-[1280px] gap-12 lg:grid-cols-2 lg:items-center">
-          <div className="max-w-2xl">
+          <div className="max-w-2xl" data-reveal>
             <SectionLabel>Solutions</SectionLabel>
-            <h1 className="text-5xl font-bold tracking-[-0.04em] text-deep-ink sm:text-6xl lg:text-[4.2rem] lg:leading-[1.04]">
+            <h1 className="text-4xl font-bold tracking-[-0.04em] text-deep-ink sm:text-5xl lg:text-[4.2rem] lg:leading-[1.04]">
               Built for decisions that cannot wait on scattered research.
             </h1>
             <p className="mt-6 text-lg leading-8 text-slate-600 sm:text-xl">
-              Stem helps teams move from external uncertainty to a clearer view of what matters, what changed, and what deserves action now.
+              Stem-cogent helps companies and teams move from external uncertainty to a clearer view of what matters, what changed, and what deserves action now.
             </p>
           </div>
 
@@ -66,17 +68,17 @@ export default function SolutionsPage() {
 
       <section className="bg-white px-6 py-20 sm:py-24 lg:px-8 lg:py-28">
         <div className="mx-auto max-w-[1280px]">
-          <div className="max-w-3xl">
-            <SectionLabel>Where Stem Helps Most</SectionLabel>
-            <h2 className="text-4xl font-bold tracking-[-0.04em] text-deep-ink sm:text-5xl">
+          <div className="max-w-3xl" data-reveal>
+            <SectionLabel>Where Stem-cogent Helps Most</SectionLabel>
+            <h2 className="text-3xl font-bold tracking-[-0.04em] text-deep-ink sm:text-4xl lg:text-5xl">
               Practical support for high-value decisions.
             </h2>
           </div>
-          <div className="mt-12 grid gap-6 lg:grid-cols-3">
+          <div className="mt-12 grid gap-6 lg:grid-cols-3" data-reveal-group>
             {SOLUTIONS.map((item) => {
               const Icon = item.icon;
               return (
-                <div key={item.title} className="rounded-[28px] border border-slate-200 bg-[linear-gradient(180deg,#ffffff_0%,#f7f9fc_100%)] p-6 shadow-[0_18px_44px_rgba(15,23,42,0.06)]">
+                <div key={item.title} className="rounded-[28px] border border-slate-200 bg-[linear-gradient(180deg,#ffffff_0%,#f7f9fc_100%)] p-6 shadow-[0_18px_44px_rgba(15,23,42,0.06)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_28px_60px_rgba(15,23,42,0.10)]">
                   <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-primary-blue/10 text-primary-blue">
                     <Icon className="h-5 w-5" />
                   </div>
@@ -97,7 +99,7 @@ export default function SolutionsPage() {
       </section>
 
       <section className="bg-[#f7f9fc] px-6 py-20 sm:py-24 lg:px-8 lg:py-28">
-        <div className="mx-auto grid max-w-[1280px] gap-6 lg:grid-cols-2">
+        <div className="mx-auto grid max-w-[1280px] gap-6 lg:grid-cols-2" data-reveal-group>
           <div className="rounded-[30px] border border-slate-200 bg-white p-7 shadow-[0_18px_44px_rgba(15,23,42,0.06)]">
             <SectionLabel>Before Stem</SectionLabel>
             <h2 className="text-3xl font-bold tracking-[-0.04em] text-deep-ink">Slow research. More guesswork.</h2>
@@ -120,8 +122,8 @@ export default function SolutionsPage() {
       </section>
 
       <section className="bg-[#0f172a] px-6 py-20 text-white sm:py-24 lg:px-8 lg:py-28">
-        <div className="mx-auto max-w-[840px] text-center">
-          <h2 className="text-4xl font-bold tracking-[-0.04em] sm:text-5xl">
+        <div className="mx-auto max-w-[840px] text-center" data-reveal>
+          <h2 className="text-3xl font-bold tracking-[-0.04em] sm:text-4xl lg:text-5xl">
             Talk through the decision environment your team operates in.
           </h2>
           <p className="mt-6 text-lg leading-8 text-slate-300">
@@ -129,7 +131,7 @@ export default function SolutionsPage() {
           </p>
           <div className="mt-8 flex flex-col justify-center gap-4 sm:flex-row">
             <Link href="/request-call" className="btn-primary">
-              Get early access <ArrowRight className="h-4 w-4" />
+              Map your decision environment <ArrowRight className="h-4 w-4" />
             </Link>
           </div>
         </div>

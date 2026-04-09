@@ -4,13 +4,13 @@ import { BrandLogo } from "@/components/BrandLogo";
 export function Footer() {
   return (
     <footer className="mt-auto border-t border-slate-200 bg-[#fbfcff] px-6 py-14 text-slate-600 lg:px-8">
-      <div className="mx-auto grid max-w-[1280px] grid-cols-1 gap-8 md:grid-cols-4">
-        <div className="col-span-1 md:col-span-2">
+      <div className="mx-auto grid max-w-[1280px] grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-4">
+        <div className="col-span-1 sm:col-span-2 md:col-span-2">
           <Link href="/" className="inline-flex items-center">
             <BrandLogo size={38} />
           </Link>
           <p className="mt-4 max-w-md text-sm leading-7 text-slate-600">
-            Stem helps Companies, Teams, and Decision makers  cut through scattered market information so they can understand what matters and act with more confidence.
+            Stem helps companies, teams, and decision makers know what matters, less guesswork, see what changing decide faster with confidence.
           </p>
         </div>
         <div>

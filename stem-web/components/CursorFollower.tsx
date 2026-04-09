@@ -1,40 +1,55 @@
 "use client";
 
-import { useEffect, useState } from "react";
-import { motion, useSpring } from "framer-motion";
+import { useEffect, useRef } from "react";
+import gsap from "gsap";
 
 export function CursorFollower() {
-  const [isVisible, setIsVisible] = useState(false);
-  const [isMobile, setIsMobile] = useState(true); // assume mobile until client confirms
-
-  const cursorX = useSpring(0, { damping: 20, stiffness: 250 });
-  const cursorY = useSpring(0, { damping: 20, stiffness: 250 });
+  const dotRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    setIsMobile(window.innerWidth < 768);
+    // Skip on touch/coarse-pointer devices (mobile/tablet)
+    const isCoarse = window.matchMedia("(pointer: coarse)").matches;
+    const ua = navigator.userAgent;
+    const isSafari = /Safari/.test(ua) && !/Chrome|Chromium|Edg/.test(ua);
+    if (isCoarse || isSafari || !dotRef.current) return;
 
-    const moveCursor = (e: MouseEvent) => {
-      cursorX.set(e.clientX - 12);
-      cursorY.set(e.clientY - 12);
-      if (!isVisible) setIsVisible(true);
-    };
+    const dot = dotRef.current;
+    gsap.set(dot, { opacity: 0, x: -24, y: -24 });
 
-    if (window.innerWidth >= 768) {
-      window.addEventListener("mousemove", moveCursor);
-      return () => window.removeEventListener("mousemove", moveCursor);
+    let revealed = false;
+
+    function onMove(e: MouseEvent) {
+      if (!revealed) {
+        gsap.to(dot, { opacity: 1, duration: 0.25, ease: "power2.out" });
+        revealed = true;
+      }
+      gsap.to(dot, {
+        x: e.clientX - 12,
+        y: e.clientY - 12,
+        duration: 0.38,
+        ease: "power2.out",
+        overwrite: true,
+      });
     }
-  }, [cursorX, cursorY, isVisible]);
 
-  if (isMobile) return null;
+    function onLeave() {
+      gsap.to(dot, { opacity: 0, duration: 0.2 });
+      revealed = false;
+    }
+
+    window.addEventListener("mousemove", onMove, { passive: true });
+    document.documentElement.addEventListener("mouseleave", onLeave);
+    return () => {
+      window.removeEventListener("mousemove", onMove);
+      document.documentElement.removeEventListener("mouseleave", onLeave);
+    };
+  }, []);
 
   return (
-    <motion.div
-      className="fixed top-0 left-0 w-6 h-6 bg-primary-blue/30 rounded-full pointer-events-none z-[9999] backdrop-blur-[1px] border border-primary-blue/20"
-      style={{
-        x: cursorX,
-        y: cursorY,
-        opacity: isVisible ? 1 : 0,
-      }}
+    <div
+      ref={dotRef}
+      aria-hidden
+      className="pointer-events-none fixed left-0 top-0 z-[9999] h-6 w-6 rounded-full border border-primary-blue/25 bg-primary-blue/28 backdrop-blur-[1px]"
     />
   );
 }

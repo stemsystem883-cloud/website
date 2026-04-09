@@ -151,7 +151,7 @@ export function FlowCanvas({
             <div
               key={`ln-l-${index}`}
               ref={(node) => { lineRefs.current[index] = node; }}
-              className="absolute right-[60px] h-px bg-[linear-gradient(90deg,rgba(53,99,235,0.08),rgba(53,99,235,0.50))]"
+              className="flow-line absolute right-[60px] h-px"
               style={{
                 width: "calc(50% + 30px)",
                 top: `${((index * 2 + 1) / (inputs.length * 2)) * 100}%`,
@@ -162,7 +162,7 @@ export function FlowCanvas({
           {inputs.map((_, index) => (
             <div
               key={`ln-r-${index}`}
-              className="absolute left-[60px] h-px bg-[linear-gradient(90deg,rgba(53,99,235,0.50),rgba(53,99,235,0.08))]"
+              className="flow-line flow-line-reverse absolute left-[60px] h-px"
               style={{
                 width: "calc(50% + 30px)",
                 top: `${((index * 2 + 1) / (inputs.length * 2)) * 100}%`,

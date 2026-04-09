@@ -2,20 +2,21 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, CheckCircle2, ExternalLink, Mail, Shield, Sparkles } from "lucide-react";
+import { PageReveal } from "@/components/PageReveal";
 import teamMemberOne from "../../team/pf.jpg";
 import teamMemberTwo from "../../team/2_gift~3.jpg";
 
 export const metadata: Metadata = {
   title: "About | Stem Decision Intelligence",
-  description: "Learn about Stem — built to help African fintech and financial-services teams move with clarity in fast-moving markets.",
+  description: "Learn about Stem — built to help African fintech and financial-services companies and teams move with clarity in fast-moving markets.",
   openGraph: {
     title: "About Stem",
-    description: "Built to help African fintech and financial-services teams move with clarity in fast-moving markets.",
+    description: "Built to help African fintech and financial-services companies and teams move with clarity in fast-moving markets.",
   },
   twitter: {
     card: "summary_large_image",
-    title: "About Stem",
-    description: "Built to help African fintech and financial-services teams move with clarity in fast-moving markets.",
+    title: "About Stem-cogent",
+    description: "Built to help African fintech and financial-services companies and teams move with clarity in fast-moving markets.",
   },
 };
 
@@ -66,11 +67,12 @@ function SectionLabel({ children }: { children: React.ReactNode }) {
 export default function AboutPage() {
   return (
     <div className="flex-1 bg-[#fbfcff]">
+      <PageReveal />
       <section className="relative overflow-hidden px-6 py-20 sm:py-24 lg:px-8 lg:py-28">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(53,99,235,0.12),transparent_30%),linear-gradient(180deg,#ffffff_0%,#f7faff_100%)]" />
-        <div className="relative mx-auto max-w-[980px] text-center">
+        <div className="relative mx-auto max-w-[980px] text-center" data-reveal>
           <SectionLabel>About Stem-Cogent</SectionLabel>
-          <h1 className="text-5xl font-bold tracking-[-0.04em] text-deep-ink sm:text-6xl lg:text-[4.2rem] lg:leading-[1.04]">
+          <h1 className="text-4xl font-bold tracking-[-0.04em] text-deep-ink sm:text-5xl lg:text-[4.2rem] lg:leading-[1.04]">
             Built for decision makers and teams making important decisions in companies and fast-moving markets.
           </h1>
           <p className="mx-auto mt-6 max-w-[46ch] text-lg leading-8 text-slate-600 sm:text-xl">
@@ -81,9 +83,9 @@ export default function AboutPage() {
 
       <section className="bg-white px-6 py-20 sm:py-24 lg:px-8 lg:py-28">
         <div className="mx-auto grid max-w-[1280px] gap-8 lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)] lg:items-start">
-          <div className="rounded-[30px] border border-slate-200 bg-[linear-gradient(180deg,#ffffff_0%,#f7f9fc_100%)] p-7 shadow-[0_18px_44px_rgba(15,23,42,0.06)]">
+          <div className="rounded-[30px] border border-slate-200 bg-[linear-gradient(180deg,#ffffff_0%,#f7f9fc_100%)] p-7 shadow-[0_18px_44px_rgba(15,23,42,0.06)]" data-reveal>
             <SectionLabel>Why We Built Stem-cogent</SectionLabel>
-            <h2 className="text-4xl font-bold tracking-[-0.04em] text-deep-ink sm:text-5xl">
+            <h2 className="text-3xl font-bold tracking-[-0.04em] text-deep-ink sm:text-4xl lg:text-5xl">
               Important market decisions are still made with incomplete visibility.
             </h2>
             <div className="mt-6 space-y-5 text-base leading-8 text-slate-600">
@@ -96,7 +98,7 @@ export default function AboutPage() {
             </div>
           </div>
 
-          <div className="rounded-[30px] border border-primary-blue/15 bg-[linear-gradient(180deg,#ffffff_0%,#eef4ff_100%)] p-7 shadow-[0_18px_44px_rgba(53,99,235,0.10)]">
+          <div className="rounded-[30px] border border-primary-blue/15 bg-[linear-gradient(180deg,#ffffff_0%,#eef4ff_100%)] p-7 shadow-[0_18px_44px_rgba(53,99,235,0.10)]" data-reveal>
             <SectionLabel>What We Are Trying To Build</SectionLabel>
             <div className="space-y-4">
               {[
@@ -122,9 +124,9 @@ export default function AboutPage() {
               The ideas shaping the product and the company.
             </h2>
           </div>
-          <div className="mt-12 grid gap-6 md:grid-cols-2">
+          <div className="mt-12 grid gap-6 md:grid-cols-2" data-reveal-group>
             {PRINCIPLES.map((item) => (
-              <div key={item.title} className="rounded-[28px] border border-white/10 bg-white/6 p-6 shadow-[0_18px_44px_rgba(2,6,23,0.16)] backdrop-blur">
+              <div key={item.title} className="rounded-[28px] border border-white/10 bg-white/6 p-6 shadow-[0_18px_44px_rgba(2,6,23,0.16)] backdrop-blur transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_26px_60px_rgba(2,6,23,0.22)]">
                 <h3 className="text-2xl font-semibold text-white">{item.title}</h3>
                 <p className="mt-3 text-sm leading-7 text-slate-300">{item.body}</p>
               </div>
@@ -135,9 +137,9 @@ export default function AboutPage() {
 
       <section className="bg-white px-6 py-20 sm:py-24 lg:px-8 lg:py-28">
         <div className="mx-auto max-w-[1280px]">
-          <div className="max-w-3xl">
+          <div className="max-w-3xl" data-reveal>
             <SectionLabel>Founding Team</SectionLabel>
-            <h2 className="text-4xl font-bold tracking-[-0.04em] text-deep-ink sm:text-5xl">
+            <h2 className="text-3xl font-bold tracking-[-0.04em] text-deep-ink sm:text-4xl lg:text-5xl">
               The people building Stem.
             </h2>
             <p className="mt-6 text-lg leading-8 text-slate-600">
@@ -145,11 +147,11 @@ export default function AboutPage() {
             </p>
           </div>
 
-          <div className="mt-12 grid gap-6 lg:grid-cols-2">
-            {TEAM_MEMBERS.map((member) => (
+          <div className="mt-12 grid gap-6 lg:grid-cols-2" data-reveal-group>
+            {TEAM_MEMBERS.map((member, index) => (
               <article
                 key={member.name}
-                className={`overflow-hidden rounded-[32px] border border-slate-200 shadow-[0_18px_44px_rgba(15,23,42,0.06)] ${member.accent}`}
+                className={`overflow-hidden rounded-[32px] border border-slate-200 shadow-[0_18px_44px_rgba(15,23,42,0.06)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_28px_60px_rgba(15,23,42,0.10)] ${member.accent}`}
               >
                 {/* Horizontal layout: image left, info right */}
                 <div className="flex flex-col sm:flex-row sm:items-stretch">
@@ -159,6 +161,8 @@ export default function AboutPage() {
                       src={member.image}
                       alt={`${member.name} portrait`}
                       fill
+                      priority={index === 0}
+                      quality={85}
                       sizes="(min-width: 640px) 200px, 100vw"
                       className="object-cover"
                       style={{ objectPosition: member.objectPosition }}
@@ -206,16 +210,16 @@ export default function AboutPage() {
 
       <section className="bg-white px-6 py-20 sm:py-24 lg:px-8 lg:py-28">
         <div className="mx-auto grid max-w-[1280px] gap-8 lg:grid-cols-[minmax(0,1fr)_minmax(0,0.9fr)] lg:items-center">
-          <div>
+          <div data-reveal>
             <SectionLabel>Early Rollout</SectionLabel>
-            <h2 className="text-4xl font-bold tracking-[-0.04em] text-deep-ink sm:text-5xl">
-              Built for a real problem teams face every day.
+            <h2 className="text-3xl font-bold tracking-[-0.04em] text-deep-ink sm:text-4xl lg:text-5xl">
+              Built for a real problem companies and teams face every day.
             </h2>
             <p className="mt-6 max-w-[48ch] text-lg leading-8 text-slate-600">
               We&apos;re currently speaking with a small number of teams ahead of public launch. That early work is shaping the product toward clarity, usefulness, and trust.
             </p>
           </div>
-          <div className="rounded-[30px] border border-slate-200 bg-[linear-gradient(180deg,#ffffff_0%,#f7f9fc_100%)] p-7 shadow-[0_18px_44px_rgba(15,23,42,0.06)]">
+          <div className="rounded-[30px] border border-slate-200 bg-[linear-gradient(180deg,#ffffff_0%,#f7f9fc_100%)] p-7 shadow-[0_18px_44px_rgba(15,23,42,0.06)]" data-reveal>
             <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-primary-blue/10 text-primary-blue">
               <Sparkles className="h-5 w-5" />
             </div>
@@ -236,13 +240,13 @@ export default function AboutPage() {
       </section>
 
       <section className="bg-[#0f172a] px-6 py-20 text-white sm:py-24 lg:px-8 lg:py-28">
-        <div className="mx-auto max-w-[840px] text-center">
-          <h2 className="text-4xl font-bold tracking-[-0.04em] sm:text-5xl">
+        <div className="mx-auto max-w-[840px] text-center" data-reveal>
+          <h2 className="text-3xl font-bold tracking-[-0.04em] sm:text-4xl lg:text-5xl">
             See how Stem could support your team&apos;s decision environment.
           </h2>
           <div className="mt-8 flex flex-col justify-center gap-4 sm:flex-row">
             <Link href="/request-call" className="btn-primary">
-              Get early access <ArrowRight className="h-4 w-4" />
+              Meet the team and discuss fit <ArrowRight className="h-4 w-4" />
             </Link>
             <Link href="/platform" className="btn-secondary">
               Explore the platform

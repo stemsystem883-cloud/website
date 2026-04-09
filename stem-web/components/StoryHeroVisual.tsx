@@ -18,7 +18,7 @@ const BADGES = [
   "Scattered sources",
   "Signal filtering",
   "Decision brief",
-  "Built for financial teams",
+  "Built for fintech/financial service companies and decision makers",
 ];
 
 export function StoryHeroVisual() {
@@ -142,7 +142,7 @@ export function StoryHeroVisual() {
             <div
               key={`line-l-${chip.label}`}
               ref={(node) => { lineRefs.current[index] = node; }}
-              className="absolute right-[65px] h-px bg-[linear-gradient(90deg,rgba(53,99,235,0.08),rgba(53,99,235,0.5))]"
+              className="flow-line absolute right-[65px] h-px"
               style={{
                 width: "calc(50% + 20px)",
                 top: `${22 + index * 14}%`,
@@ -154,7 +154,7 @@ export function StoryHeroVisual() {
           {SOURCE_CHIPS.map((chip, index) => (
             <div
               key={`line-r-${chip.label}`}
-              className="absolute left-[65px] h-px bg-[linear-gradient(90deg,rgba(53,99,235,0.5),rgba(53,99,235,0.08))]"
+              className="flow-line flow-line-reverse absolute left-[65px] h-px"
               style={{
                 width: "calc(50% + 20px)",
                 top: `${22 + index * 14}%`,

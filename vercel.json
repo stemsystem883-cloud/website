@@ -1,5 +1,3 @@
 {
-  "buildCommand": "cd stem-web && npm run build",
-  "installCommand": "cd stem-web && npm install",
   "framework": "nextjs"
 }
