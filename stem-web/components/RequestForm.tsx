@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { CheckCircle2, Loader2 } from "lucide-react";
+import { submitRequestAction } from "@/app/actions";
 
 type FormState = "idle" | "loading" | "success" | "error";
 
@@ -31,11 +32,14 @@ export function RequestForm() {
 
     setState("loading");
     try {
-      // Replace this URL with your actual endpoint (Formspree, server action, etc.)
-      // await fetch("https://formspree.io/f/YOUR_ID", { method: "POST", body: data });
-      await new Promise((r) => setTimeout(r, 1200)); // Simulated delay
-      setState("success");
-    } catch {
+      const result = await submitRequestAction(data);
+      if (result.success) {
+        setState("success");
+      } else {
+        setState("error");
+      }
+    } catch (err) {
+      console.error("Submission catch:", err);
       setState("error");
     }
   }
