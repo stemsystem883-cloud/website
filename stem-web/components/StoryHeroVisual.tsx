@@ -40,7 +40,7 @@ export function StoryHeroVisual() {
       intro
         .from(containerRef.current, { opacity: 0, y: 24, duration: 0.65 })
         .from(chips, { opacity: 0, x: -24, stagger: 0.08, duration: 0.55 }, 0.15)
-        .from(lines, { scaleX: 0, transformOrigin: "left center", opacity: 0, stagger: 0.05, duration: 0.4 }, 0.5)
+        .from(lines, { scale: 0, opacity: 0, stagger: 0.05, duration: 0.4 }, 0.5)
         .from(lensRef.current, { opacity: 0, scale: 0.82, duration: 0.55 }, 0.62)
         .from(cardRef.current, { opacity: 0, x: 26, y: 10, duration: 0.65 }, 0.88)
         .from(badges, { opacity: 0, y: 10, stagger: 0.06, duration: 0.38 }, 1.05);
@@ -85,45 +85,12 @@ export function StoryHeroVisual() {
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(53,99,235,0.15),transparent_35%),radial-gradient(circle_at_bottom_right,rgba(15,23,42,0.08),transparent_32%)]" />
       <div className="absolute inset-0 opacity-35 [background-image:linear-gradient(rgba(148,163,184,0.12)_1px,transparent_1px),linear-gradient(90deg,rgba(148,163,184,0.12)_1px,transparent_1px)] [background-size:36px_36px]" />
 
-      {/* Mobile layout: vertical stack */}
-      <div className="relative flex flex-col gap-4 md:hidden">
-        {SOURCE_CHIPS.slice(0, 3).map((chip, index) => (
-          <div
-            key={chip.label}
-            ref={(node) => { chipRefs.current[index] = node; }}
-            className="rounded-2xl border border-white/80 bg-white/90 px-4 py-3 shadow-[0_8px_24px_rgba(15,23,42,0.07)] backdrop-blur"
-          >
-            <p className="text-[10px] font-semibold uppercase tracking-[0.24em] text-primary-blue/70">{chip.label}</p>
-            <p className="mt-1 text-sm font-medium leading-relaxed text-slate-700">{chip.note}</p>
-          </div>
-        ))}
-        <div ref={cardRef} className="rounded-[24px] border border-slate-200/80 bg-[#0f172a] p-5 text-white shadow-[0_20px_50px_rgba(15,23,42,0.28)]">
-          <div className="flex items-start justify-between gap-3 border-b border-white/10 pb-3">
-            <div>
-              <p className="text-[10px] font-semibold uppercase tracking-[0.26em] text-blue-200/70">Priority Brief</p>
-              <h3 className="mt-1.5 text-base font-semibold leading-snug text-white">Regulatory timing shift detected</h3>
-            </div>
-            <span className="shrink-0 rounded-full border border-emerald-400/30 bg-emerald-400/10 px-2.5 py-1 text-[10px] font-semibold uppercase tracking-[0.2em] text-emerald-300">Live</span>
-          </div>
-          <div className="space-y-3 pt-3">
-            <div className="rounded-xl border border-white/8 bg-white/5 p-3">
-              <p className="text-[10px] font-semibold uppercase tracking-[0.22em] text-blue-200/70">Why it matters</p>
-              <p className="mt-1.5 text-sm leading-relaxed text-slate-300">A new policy signal and competitor movement are converging around the same decision window.</p>
-            </div>
-            <div className="rounded-xl border border-white/8 bg-white/5 px-4 py-3">
-              <p className="text-[10px] font-semibold uppercase tracking-[0.22em] text-blue-200/70">Next move</p>
-              <p className="mt-1 text-sm font-medium text-white">Review timing assumptions before acting.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Desktop layout: 3-column grid */}
-      <div className="relative hidden md:grid md:grid-cols-[1fr_130px_1fr] md:items-center md:gap-4 md:min-h-[480px] lg:gap-6 lg:min-h-[520px]">
-
-        {/* Left: chips column */}
-        <div className="flex flex-col justify-center gap-3 pr-2">
-          {SOURCE_CHIPS.map((chip, index) => (
+      {/* Unified Responsive Dashboard Layout */}
+      <div className="relative flex flex-col items-center gap-6 md:grid md:grid-cols-[1fr_130px_1fr] md:items-center md:gap-4 md:min-h-[480px] lg:gap-6 lg:min-h-[520px]">
+        
+        {/* Left/Top: Source Chips */}
+        <div className="flex w-full flex-col gap-3 pr-0 md:pr-2">
+          {SOURCE_CHIPS.slice(0, 5).map((chip, index) => (
             <div
               key={chip.label}
               ref={(node) => { chipRefs.current[index] = node; }}
@@ -135,14 +102,19 @@ export function StoryHeroVisual() {
           ))}
         </div>
 
-        {/* Center: lens + connecting lines */}
-        <div className="relative flex h-full items-center justify-center">
-          {/* Left-side lines (chip → lens) */}
+        {/* Center: Lens + Connecting Lines */}
+        <div className="relative flex h-[160px] w-full items-center justify-center md:h-full">
+          {/* Mobile Vertical Lines */}
+          <div className="absolute inset-0 flex flex-col items-center justify-between py-2 md:hidden">
+            <div className="h-full w-px bg-[repeating-linear-gradient(0deg,rgba(53,99,235,0.4)_0px,rgba(53,99,235,0.4)_5px,transparent_5px,transparent_10px)]" />
+          </div>
+
+          {/* Desktop Horizontal Lines (Chip -> Lens) */}
           {SOURCE_CHIPS.map((chip, index) => (
             <div
               key={`line-l-${chip.label}`}
               ref={(node) => { lineRefs.current[index] = node; }}
-              className="flow-line absolute right-[65px] h-px"
+              className="flow-line absolute right-[65px] hidden h-px md:block"
               style={{
                 width: "calc(50% + 20px)",
                 top: `${22 + index * 14}%`,
@@ -150,11 +122,11 @@ export function StoryHeroVisual() {
             />
           ))}
 
-          {/* Right-side lines (lens → card) */}
+          {/* Desktop Horizontal Lines (Lens -> Card) */}
           {SOURCE_CHIPS.map((chip, index) => (
             <div
               key={`line-r-${chip.label}`}
-              className="flow-line flow-line-reverse absolute left-[65px] h-px"
+              className="flow-line flow-line-reverse absolute left-[65px] hidden h-px md:block"
               style={{
                 width: "calc(50% + 20px)",
                 top: `${22 + index * 14}%`,
@@ -162,22 +134,22 @@ export function StoryHeroVisual() {
             />
           ))}
 
-          {/* Lens circle */}
+          {/* Lens Circle */}
           <div
             ref={lensRef}
-            className="relative z-10 flex h-[112px] w-[112px] shrink-0 items-center justify-center rounded-full border border-primary-blue/25 bg-white shadow-[0_16px_44px_rgba(53,99,235,0.14)]"
+            className="relative z-10 flex h-[100px] w-[100px] shrink-0 items-center justify-center rounded-full border border-primary-blue/25 bg-white shadow-[0_16px_44px_rgba(53,99,235,0.14)] md:h-[112px] md:w-[112px]"
           >
-            <div className="absolute inset-[12px] rounded-full border border-dashed border-primary-blue/20" />
-            <div className="absolute inset-[26px] rounded-full bg-primary-blue/8" />
+            <div className="absolute inset-[10px] rounded-full border border-dashed border-primary-blue/20" />
+            <div className="absolute inset-[22px] rounded-full bg-primary-blue/8" />
             <div className="relative text-center px-1">
               <p className="text-[9px] font-semibold uppercase tracking-[0.26em] text-primary-blue/65 leading-tight">Signal<br />Lens</p>
-              <p className="mt-1 text-xs font-semibold text-deep-ink leading-tight">What matters now</p>
+              <p className="mt-1 text-xs font-semibold text-deep-ink leading-tight">What matters</p>
             </div>
           </div>
         </div>
 
-        {/* Right: priority brief card */}
-        <div ref={cardRef} className="flex flex-col justify-center pl-2">
+        {/* Right/Bottom: Priority Brief Card */}
+        <div ref={cardRef} className="w-full pl-0 md:pl-2">
           <div className="rounded-[26px] border border-slate-900/20 bg-[#0f172a] p-5 text-white shadow-[0_24px_64px_rgba(15,23,42,0.32)]">
             <div className="flex items-start justify-between gap-2 border-b border-white/10 pb-4">
               <div className="min-w-0">
@@ -200,19 +172,19 @@ export function StoryHeroVisual() {
               </div>
 
               <div className="grid grid-cols-2 gap-2">
-                <div className="rounded-xl border border-white/8 bg-white/5 p-3">
+                <div className="rounded-xl border border-white/8 bg-white/5 p-3 text-center">
                   <p className="text-[9px] font-semibold uppercase tracking-[0.2em] text-blue-200/70">Confidence</p>
                   <p className="mt-1.5 text-xl font-bold text-white">97%</p>
                 </div>
                 <div className="rounded-xl border border-white/8 bg-white/5 p-3">
                   <p className="text-[9px] font-semibold uppercase tracking-[0.2em] text-blue-200/70">Source trail</p>
-                  <p className="mt-1.5 text-[12px] font-medium leading-snug text-white">CBN circular, market watch, competitor update</p>
+                  <p className="mt-1 text-[11px] font-medium leading-snug text-white">CBN circular, market watch...</p>
                 </div>
               </div>
 
               <div className="rounded-xl border border-white/8 bg-white/5 px-3.5 py-3">
                 <p className="text-[10px] font-semibold uppercase tracking-[0.22em] text-blue-200/70">Next move</p>
-                <p className="mt-1.5 text-[13px] font-medium leading-snug text-white">Review timing assumptions before acting.</p>
+                <p className="mt-1.5 text-[13px] font-medium leading-snug text-white text-center">Review timing assumptions before acting.</p>
               </div>
             </div>
           </div>

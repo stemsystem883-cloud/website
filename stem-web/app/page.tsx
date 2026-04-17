@@ -110,15 +110,15 @@ const SOCIAL_PROOF = [
 const TRUST_POINTS = [
   {
     title: "Clear problem focus",
-    body: "Built around a real challenge: companies, businesseses, teams trying to make important decisions with fragmented information, changes and unreliable information.",
+    body: "Built around a real challenge: companies, businesses, and teams trying to make important decisions with fragmented and unreliable information.",
   },
   {
     title: "Early rollout",
-    body: "We are speaking with a small number of teams and individuals in cooperate organization with experience ahead of public launch to make the product sharper, clearer, and more useful.",
+    body: "We are speaking with a small number of teams and individuals in corporate organizations with experience ahead of public launch to make the product sharper, clearer, and more useful.",
   },
   {
     title: "Calm product design",
-    body: "Everything is being designed to reduce noise, not add more of it. Stem-cogent is here to help think better under pressure.",
+    body: "Everything is being designed to reduce noise, not add more of it. Stem-cogent is here to help you think better under pressure.",
   },
 ];
 
@@ -302,7 +302,8 @@ export default function Home() {
           </div>
 
           <div className="relative lg:pl-2" data-story-reveal>
-            <div className="relative hidden h-[500px] rounded-[34px] border border-slate-200/80 bg-white/82 p-7 shadow-[0_24px_72px_rgba(15,23,42,0.08)] backdrop-blur md:block lg:h-[520px] lg:p-8">
+            {/* Visual Dashboard Container */}
+            <div className="relative h-[440px] rounded-[34px] border border-slate-200/80 bg-white/82 p-5 shadow-[0_24px_72px_rgba(15,23,42,0.08)] backdrop-blur sm:h-[500px] lg:h-[520px] lg:p-8">
               <div className="absolute inset-0 rounded-[34px] bg-[radial-gradient(circle_at_top_left,rgba(53,99,235,0.12),transparent_30%),linear-gradient(180deg,rgba(255,255,255,0.96),rgba(248,250,252,0.90))]" />
               {PROBLEM_NOTES.map((note, index) => (
                 <div
@@ -310,40 +311,31 @@ export default function Home() {
                   ref={(node) => {
                     problemCardRefs.current[index] = node;
                   }}
-                  className="absolute w-[200px] rounded-2xl border border-slate-200 bg-white/95 px-4 py-3 shadow-[0_12px_30px_rgba(15,23,42,0.07)] lg:w-[210px]"
+                  className="absolute w-[150px] rounded-2xl border border-slate-200 bg-white/95 px-3 py-2.5 shadow-[0_12px_30px_rgba(15,23,42,0.07)] sm:w-[200px] lg:w-[210px] lg:px-4 lg:py-3"
                   style={{ top: note.top, left: note.left, right: note.right, bottom: note.bottom }}
                 >
-                  <p className="text-[10px] font-semibold uppercase tracking-[0.24em] text-primary-blue/65">
+                  <p className="text-[9px] font-semibold uppercase tracking-[0.22em] text-primary-blue/65 lg:text-[10px]">
                     {note.label}
                   </p>
-                  <p className="mt-2 text-sm font-medium leading-6 text-slate-700">{note.detail}</p>
+                  <p className="mt-1.5 text-xs font-medium leading-relaxed text-slate-700 sm:text-sm lg:mt-2 lg:leading-6">
+                    {note.detail}
+                  </p>
                 </div>
               ))}
 
               <div
                 ref={problemSummaryRef}
-                className="absolute bottom-6 left-1/2 z-10 w-[270px] -translate-x-1/2 rounded-[22px] border border-slate-700/40 bg-[#0f172a] p-5 text-white shadow-[0_26px_62px_rgba(15,23,42,0.28)] lg:bottom-6 lg:w-[286px]"
+                className="absolute bottom-4 left-1/2 z-10 w-[240px] -translate-x-1/2 rounded-[22px] border border-slate-700/40 bg-[#0f172a] p-4 text-white shadow-[0_26px_62px_rgba(15,23,42,0.28)] sm:bottom-6 sm:w-[270px] sm:p-5 lg:w-[286px]"
               >
-                <p className="text-[10px] font-semibold uppercase tracking-[0.26em] text-blue-200/70">
+                <p className="text-[9px] font-semibold uppercase tracking-[0.24em] text-blue-200/70 sm:text-[10px]">
                   What teams need instead
                 </p>
-                <h3 className="mt-2 text-lg font-semibold leading-[1.25]">A clearer view of what matters before they move.</h3>
-                <p className="mt-3 text-sm leading-7 text-slate-300">
+                <h3 className="mt-1.5 text-base font-semibold leading-tight sm:mt-2 sm:text-lg sm:leading-[1.25]">
+                  A clearer view of what matters before they move.
+                </h3>
+                <p className="mt-2 text-xs leading-6 text-slate-300 sm:mt-3 sm:text-sm sm:leading-7">
                   The goal is not more information. It is a better way to understand the market and decide with more confidence.
                 </p>
-              </div>
-            </div>
-
-            <div className="space-y-4 md:hidden">
-              {PROBLEM_NOTES.slice(0, 3).map((note) => (
-                <div key={note.label} className="rounded-2xl border border-slate-200 bg-white px-4 py-4 shadow-sm">
-                  <p className="text-[10px] font-semibold uppercase tracking-[0.24em] text-primary-blue/65">{note.label}</p>
-                  <p className="mt-2 text-sm font-medium leading-6 text-slate-700">{note.detail}</p>
-                </div>
-              ))}
-              <div className="rounded-[26px] border border-slate-200 bg-[#0f172a] p-5 text-white shadow-[0_24px_60px_rgba(15,23,42,0.24)]">
-                <p className="text-[10px] font-semibold uppercase tracking-[0.26em] text-blue-200/70">What teams need instead</p>
-                <p className="mt-3 text-lg font-semibold">A clearer view of what matters before they move.</p>
               </div>
             </div>
           </div>
@@ -538,7 +530,7 @@ export default function Home() {
             <div className="mt-8 rounded-[26px] border border-white/10 bg-black/20 p-5">
               <p className="text-xs font-semibold uppercase tracking-[0.26em] text-blue-200/70">Founder note</p>
               <p className="mt-3 text-sm leading-7 text-slate-300">
-                Stem-cogent is here to help companies and teams think clearly under pressure. See waht changing. Reduce guesswork. Know what matter. Less labor researching for data and information.
+                Stem-cogent is here to help companies and teams think clearly under pressure. See what's changing. Reduce guesswork. Know what matters. Spend less time researching and more time deciding.
               </p>
             </div>
           </div>

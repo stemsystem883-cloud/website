@@ -23,15 +23,15 @@ export const metadata: Metadata = {
 const PRINCIPLES = [
   {
     title: "Clarity over noise",
-    body: "You or your teams do not need more scattered information. They need a better way to understand what matters.",
+    body: "You and your teams do not need more scattered information. You need a better way to understand what matters.",
   },
   {
     title: "Calm product design",
-    body: "Stem-cogent helps decisions makers and teams think more clearly under pressure, not overwhelm them with unnecessary complexity.",
+    body: "Stem-cogent helps decision makers and teams think more clearly under pressure, without overwhelming them with unnecessary complexity.",
   },
   {
     title: "Useful before impressive",
-    body: "Designed for helping decisions makers and teams make real decisions faster, less guesswork and less labour.",
+    body: "Designed to help decision makers and teams make real decisions faster, with less guesswork and less manual effort.",
   },
   {
     title: "Trust through restraint",
@@ -48,6 +48,7 @@ const TEAM_MEMBERS = [
     body: "An entrepreneur, AI engineer, and innovative builder driven by a passion to create intelligent systems that strengthen and improve the ecosystem around them.",
     objectPosition: "50% 16%",
     accent: "bg-[linear-gradient(180deg,#edf6ff_0%,#f7f9fc_100%)]",
+    linkedin: "https://www.linkedin.com/in/alex-marco1820/",
   },
   {
     image: teamMemberTwo,
@@ -57,6 +58,7 @@ const TEAM_MEMBERS = [
     body: "A strategic operator with the skills to build and scale businesses, focused on shaping a sharper commercial direction for Stem and the teams it serves.",
     objectPosition: "50% 20%",
     accent: "bg-[linear-gradient(180deg,#fff3f1_0%,#f7f9fc_100%)]",
+    linkedin: "https://www.linkedin.com/in/gift-nduka/",
   },
 ];
 
@@ -153,10 +155,10 @@ export default function AboutPage() {
                 key={member.name}
                 className={`overflow-hidden rounded-[32px] border border-slate-200 shadow-[0_18px_44px_rgba(15,23,42,0.06)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_28px_60px_rgba(15,23,42,0.10)] ${member.accent}`}
               >
-                {/* Horizontal layout: image left, info right */}
-                <div className="flex flex-col sm:flex-row sm:items-stretch">
-                  {/* Image — fixed width on sm+, full width on mobile */}
-                  <div className="relative h-56 w-full shrink-0 overflow-hidden bg-[#eaf0fb] sm:h-auto sm:w-[200px]">
+                {/* Responsive layout: vertical on mobile, horizontal on sm+ */}
+                <div className="flex flex-col sm:flex-row sm:items-stretch h-full">
+                  {/* Image container — fixed height on mobile, fixed width on sm+ */}
+                  <div className="relative h-[300px] w-full shrink-0 overflow-hidden bg-[#eaf0fb] sm:h-auto sm:w-[200px]">
                     <Image
                       src={member.image}
                       alt={`${member.name} portrait`}
@@ -167,11 +169,12 @@ export default function AboutPage() {
                       className="object-cover"
                       style={{ objectPosition: member.objectPosition }}
                     />
+                    {/* Gradient overlay: bottom-up on mobile, left-to-right on sm+ */}
                     <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent sm:bg-gradient-to-r sm:from-transparent sm:via-transparent sm:to-black/10" />
                   </div>
 
-                  {/* Info */}
-                  <div className="flex flex-1 flex-col justify-center gap-3 p-6">
+                  {/* Info — centered on sm+, naturally stacked on mobile */}
+                  <div className="flex flex-col justify-start sm:justify-center gap-3 p-6 sm:p-8 sm:flex-1">
                     <p className="text-[10px] font-semibold uppercase tracking-[0.26em] text-primary-blue/70">
                       {member.label}
                     </p>
@@ -184,7 +187,7 @@ export default function AboutPage() {
                     <p className="text-sm leading-6 text-slate-600">{member.body}</p>
                     <div className="flex flex-wrap gap-2 pt-1">
                       <a
-                        href="https://linkedin.com/in/placeholder"
+                        href={member.linkedin}
                         target="_blank"
                         rel="noreferrer"
                         className="inline-flex items-center gap-1.5 rounded-full border border-slate-200 bg-white/80 px-3 py-1.5 text-xs font-medium text-slate-700 transition-colors hover:border-primary-blue/30 hover:text-primary-blue"
@@ -249,6 +252,14 @@ export default function AboutPage() {
               Meet the team and discuss fit <ArrowRight className="h-4 w-4" />
             </Link>
             <Link href="/platform" className="btn-secondary">
+              Explore the platform
+            </Link>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+}e="btn-secondary">
               Explore the platform
             </Link>
           </div>
