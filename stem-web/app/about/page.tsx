@@ -259,12 +259,4 @@ export default function AboutPage() {
       </section>
     </div>
   );
-}e="btn-secondary">
-              Explore the platform
-            </Link>
-          </div>
-        </div>
-      </section>
-    </div>
-  );
 }
