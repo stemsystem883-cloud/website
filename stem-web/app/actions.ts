@@ -14,11 +14,11 @@ export async function submitRequestAction(formData: FormData) {
 
   try {
     const { data, error } = await resend.emails.send({
-      from: "Stem Early Access <onboarding@resend.dev>",
+      from: "Stem Waitlist <onboarding@resend.dev>",
       to: [process.env.NOTIFICATION_EMAIL || "stemsystem883@gmail.com"],
-      subject: `New Lead: ${firstName} ${lastName} from ${company}`,
+      subject: `New Waitlist Sign-up: ${firstName} ${lastName} from ${company}`,
       html: `
-        <h2>New Early Access Request</h2>
+        <h2>New Waitlist Sign-up</h2>
         <p><strong>Name:</strong> ${firstName} ${lastName}</p>
         <p><strong>Email:</strong> ${email}</p>
         <p><strong>Company:</strong> ${company}</p>

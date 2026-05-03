@@ -73,8 +73,8 @@ export default function PlatformPage() {
               Stem-cogent helps fintech and financial companies and teams keep up with what is changing, understand what matters faster, and move from scattered information to clearer decisions.
             </p>
             <div className="mt-8 flex flex-col gap-4 sm:flex-row">
-              <Link href="/request-call" className="btn-primary">
-                Get early access <ArrowRight className="h-4 w-4" />
+              <Link href="/waitlist" className="btn-primary">
+                Join the waitlist <ArrowRight className="h-4 w-4" />
               </Link>
               <Link href="/use-cases" className="btn-secondary">
                 Explore use cases
@@ -203,8 +203,8 @@ export default function PlatformPage() {
             Tell us what you or your company and team needs to track, assess, or decide. We&apos;ll show you where the platform fits and where it helps first.
           </p>
           <div className="mt-8 flex flex-col justify-center gap-4 sm:flex-row">
-            <Link href="/request-call" className="btn-primary">
-              See how it fits your workflow <ArrowRight className="h-4 w-4" />
+            <Link href="/waitlist" className="btn-primary">
+              Join the waitlist <ArrowRight className="h-4 w-4" />
             </Link>
             <Link href="/solutions" className="btn-secondary">
               Explore solutions

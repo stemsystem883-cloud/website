@@ -1,0 +1,33 @@
+# Stem | Decision Intelligence
+
+Stem (featuring The Stem-Cogent) is a Nigerian business intelligence and decision intelligence platform built for fintech and financial-services companies.
+
+## Core Services
+- **Business Intelligence Nigeria**: Real-time market monitoring and competitor tracking.
+- **The Stem-Cogent**: A proprietary signal lens that filters market noise into actionable briefs.
+- **Fintech Data Analytics**: Detecting meaningful changes in payment trends and regulatory shifts.
+- **Decision Intelligence**: Educational resources and tools for high-value strategic calls.
+
+## Founding Team
+- **Odion O. Alex**: CEO & AI Engineer. Expert in building intelligent systems for the financial ecosystem.
+- **Gift Chinedu Nduka**: CSO & Strategic Operator. Expert in scaling businesses and commercial direction.
+
+## Key Features
+- **Early Market Shift Identification**: Spotting trends in African fintech before they become public.
+- **Real-time Data**: Monitoring Nigerian payment trends and regulatory (CBN) circulars.
+- **NDPR Compliant**: Ensuring data protection and security for financial institutions.
+- **Waitlist Model**: Currently in limited rollout for strategy and growth teams.
+
+## Important Pages
+- Homepage: https://stem.africa
+- About & Team: https://stem.africa/about
+- Platform: https://stem.africa/platform
+- Solutions: https://stem.africa/solutions
+- Use Cases: https://stem.africa/use-cases
+- Join Waitlist: https://stem.africa/waitlist
+- Sitemap: https://stem.africa/sitemap.xml
+
+## Contact & Profiles
+- LinkedIn (Odion O. Alex): https://www.linkedin.com/in/alex-marco1820/
+- LinkedIn (Gift Chinedu Nduka): https://www.linkedin.com/in/gift-nduka/
+- Email: stemsystem883@gmail.com

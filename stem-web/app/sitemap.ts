@@ -10,7 +10,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: "/use-cases", priority: 0.85, changeFrequency: "monthly" },
     { url: "/insights", priority: 0.8, changeFrequency: "weekly" },
     { url: "/about", priority: 0.75, changeFrequency: "monthly" },
-    { url: "/request-call", priority: 0.9, changeFrequency: "monthly" },
+    { url: "/waitlist", priority: 0.9, changeFrequency: "monthly" },
+    { url: "/company-facts", priority: 0.5, changeFrequency: "monthly" },
   ] as const;
 
   return routes.map(({ url, priority, changeFrequency }) => ({

@@ -60,10 +60,10 @@ export function Header() {
 
         <div className="flex items-center gap-4">
           <Link
-            href="/request-call"
+            href="/waitlist"
             className="hidden md:inline-flex btn-primary !h-9 !px-4 !py-0 !text-sm"
           >
-            Get early access
+            Join the waitlist
           </Link>
           <button
             className="md:hidden p-2 text-gray-600 hover:text-deep-ink transition-colors"
@@ -95,11 +95,11 @@ export function Header() {
             </Link>
           ))}
           <Link
-            href="/request-call"
+            href="/waitlist"
             onClick={closeMenu}
             className="mt-2 inline-flex items-center justify-center rounded-md bg-primary-blue px-4 py-3 text-sm font-medium text-white shadow-sm hover:bg-blue-700 transition-colors"
           >
-            Get early access
+            Join the waitlist
           </Link>
         </nav>
       )}

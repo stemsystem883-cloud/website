@@ -7,16 +7,24 @@ import teamMemberOne from "../../team/pf.jpg";
 import teamMemberTwo from "../../team/2_gift~3.jpg";
 
 export const metadata: Metadata = {
-  title: "About | Stem Decision Intelligence",
-  description: "Learn about Stem — built to help African fintech and financial-services companies and teams move with clarity in fast-moving markets.",
+  title: "About | Founding Team | Stem Decision Intelligence",
+  description: "Learn about Stem and its founders, Odion O. Alex and Gift Chinedu Nduka. Built to help African fintech and financial-services companies move with clarity.",
+  keywords: [
+    "Odion O. Alex",
+    "Gift Chinedu Nduka",
+    "Stem founders",
+    "fintech founders Nigeria",
+    "African decision intelligence",
+    "market intelligence team",
+  ],
   openGraph: {
-    title: "About Stem",
-    description: "Built to help African fintech and financial-services companies and teams move with clarity in fast-moving markets.",
+    title: "About Stem | Founding Team",
+    description: "Built by Odion O. Alex and Gift Chinedu Nduka to help African fintech and financial-services companies move with clarity.",
   },
   twitter: {
     card: "summary_large_image",
-    title: "About Stem-cogent",
-    description: "Built to help African fintech and financial-services companies and teams move with clarity in fast-moving markets.",
+    title: "About Stem | Founding Team",
+    description: "Built by Odion O. Alex and Gift Chinedu Nduka to help African fintech and financial-services companies move with clarity.",
   },
 };
 
@@ -62,6 +70,39 @@ const TEAM_MEMBERS = [
   },
 ];
 
+const personSchema = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Odion O. Alex",
+    "jobTitle": "Co-Founder and CEO",
+    "affiliation": {
+      "@type": "Organization",
+      "name": "Stem"
+    },
+    "url": "https://stem.africa/about",
+    "sameAs": [
+      "https://www.linkedin.com/in/alex-marco1820/"
+    ],
+    "description": "An entrepreneur, AI engineer, and innovative builder driven by a passion to create intelligent systems."
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Gift Chinedu Nduka",
+    "jobTitle": "Co-Founder and CSO",
+    "affiliation": {
+      "@type": "Organization",
+      "name": "Stem"
+    },
+    "url": "https://stem.africa/about",
+    "sameAs": [
+      "https://www.linkedin.com/in/gift-nduka/"
+    ],
+    "description": "A strategic operator with the skills to build and scale businesses, focused on shaping a sharper commercial direction for Stem."
+  }
+];
+
 function SectionLabel({ children }: { children: React.ReactNode }) {
   return <p className="mb-4 text-xs font-semibold uppercase tracking-[0.28em] text-primary-blue/70">{children}</p>;
 }
@@ -69,6 +110,10 @@ function SectionLabel({ children }: { children: React.ReactNode }) {
 export default function AboutPage() {
   return (
     <div className="flex-1 bg-[#fbfcff]">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
+      />
       <PageReveal />
       <section className="relative overflow-hidden px-6 py-20 sm:py-24 lg:px-8 lg:py-28">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(53,99,235,0.12),transparent_30%),linear-gradient(180deg,#ffffff_0%,#f7faff_100%)]" />
@@ -248,8 +293,8 @@ export default function AboutPage() {
             See how Stem could support your team&apos;s decision environment.
           </h2>
           <div className="mt-8 flex flex-col justify-center gap-4 sm:flex-row">
-            <Link href="/request-call" className="btn-primary">
-              Meet the team and discuss fit <ArrowRight className="h-4 w-4" />
+            <Link href="/waitlist" className="btn-primary">
+              Join the waitlist <ArrowRight className="h-4 w-4" />
             </Link>
             <Link href="/platform" className="btn-secondary">
               Explore the platform

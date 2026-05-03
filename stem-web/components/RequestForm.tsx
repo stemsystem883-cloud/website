@@ -17,9 +17,7 @@ export function RequestForm() {
     const email = String(data.get("email") ?? "");
     if (!email) errs.email = "Required";
     else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) errs.email = "Enter a valid email";
-    if (!data.get("company")) errs.company = "Required";
     if (!data.get("role")) errs.role = "Select a role";
-    if (!data.get("message")) errs.message = "Required";
     return errs;
   }
 
@@ -57,9 +55,9 @@ export function RequestForm() {
         <div className="flex h-16 w-16 items-center justify-center rounded-full bg-emerald-50">
           <CheckCircle2 className="h-8 w-8 text-emerald-500" />
         </div>
-        <h2 className="mt-6 text-2xl font-semibold text-deep-ink">Request received</h2>
+        <h2 className="mt-6 text-2xl font-semibold text-deep-ink">You&apos;re on the list!</h2>
         <p className="mt-3 max-w-[36ch] text-sm leading-7 text-slate-500">
-          We will be in touch within 48 hours to schedule a conversation that fits your team.
+          We&apos;ve added you to the Stem waitlist. We&apos;ll reach out as soon as we&apos;re ready for more users.
         </p>
       </div>
     );
@@ -114,7 +112,7 @@ export function RequestForm() {
 
         <div>
           <label htmlFor="email" className="mb-2 block text-sm font-medium text-deep-ink">
-            Work email
+            Your email
           </label>
           <input
             type="email"
@@ -123,7 +121,7 @@ export function RequestForm() {
             required
             aria-required="true"
             autoComplete="email"
-            placeholder="jane@company.com"
+            placeholder="jane@example.com"
             disabled={isLoading}
             className={fieldClass("email")}
           />
@@ -133,20 +131,17 @@ export function RequestForm() {
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
           <div>
             <label htmlFor="company" className="mb-2 block text-sm font-medium text-deep-ink">
-              Company name
+              Company name <span className="text-slate-400 font-normal">(Optional)</span>
             </label>
             <input
               type="text"
               id="company"
               name="company"
-              required
-              aria-required="true"
               autoComplete="organization"
-              placeholder="Moniepoint Ltd"
+              placeholder="E.g. Moniepoint Ltd"
               disabled={isLoading}
               className={fieldClass("company")}
             />
-            {errors.company && <p className="mt-1.5 text-xs text-red-500">{errors.company}</p>}
           </div>
           <div>
             <label htmlFor="role" className="mb-2 block text-sm font-medium text-deep-ink">
@@ -175,19 +170,16 @@ export function RequestForm() {
 
         <div>
           <label htmlFor="message" className="mb-2 block text-sm font-medium text-deep-ink">
-            What are you trying to understand or improve?
+            How can Stem help you or your team? <span className="text-slate-400 font-normal">(Optional)</span>
           </label>
           <textarea
             id="message"
             name="message"
-            rows={5}
-            required
-            aria-required="true"
+            rows={4}
             disabled={isLoading}
             className={`${fieldClass("message")} resize-none`}
-            placeholder="E.g. We need better visibility into competitor pricing changes and regulatory shifts."
+            placeholder="Tell us a bit about your market intelligence needs..."
           />
-          {errors.message && <p className="mt-1.5 text-xs text-red-500">{errors.message}</p>}
         </div>
 
         <button
@@ -201,7 +193,7 @@ export function RequestForm() {
               Submitting…
             </>
           ) : (
-            "Submit request"
+            "Join waitlist"
           )}
         </button>
         <p className="text-center text-xs leading-6 text-slate-500">

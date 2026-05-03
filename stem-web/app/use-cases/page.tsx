@@ -116,8 +116,8 @@ export default function UseCasesPage() {
             We can map Stem-cogent to the market questions, workflows, and decision pressure your team is already dealing with.
           </p>
           <div className="mt-8 flex flex-col justify-center gap-4 sm:flex-row">
-            <Link href="/request-call" className="btn-primary">
-              Talk through your use case <ArrowRight className="h-4 w-4" />
+            <Link href="/waitlist" className="btn-primary">
+              Join the waitlist <ArrowRight className="h-4 w-4" />
             </Link>
           </div>
         </div>

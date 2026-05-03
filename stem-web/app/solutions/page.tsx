@@ -130,8 +130,8 @@ export default function SolutionsPage() {
             We&apos;ll help you map where Stem can reduce blind spots and make the next important decision easier to defend.
           </p>
           <div className="mt-8 flex flex-col justify-center gap-4 sm:flex-row">
-            <Link href="/request-call" className="btn-primary">
-              Map your decision environment <ArrowRight className="h-4 w-4" />
+            <Link href="/waitlist" className="btn-primary">
+              Join the waitlist <ArrowRight className="h-4 w-4" />
             </Link>
           </div>
         </div>

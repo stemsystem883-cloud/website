@@ -16,6 +16,7 @@ import {
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { StoryHeroVisual } from "@/components/StoryHeroVisual";
+import { FAQSection } from "@/components/FAQSection";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -233,8 +234,8 @@ export default function Home() {
             </p>
 
             <div className="mt-8 flex flex-col gap-4 sm:flex-row">
-              <Link href="/request-call" className="btn-primary">
-                Get early access <ArrowRight className="h-4 w-4" />
+              <Link href="/waitlist" className="btn-primary">
+                Join the waitlist <ArrowRight className="h-4 w-4" />
               </Link>
               <Link href="/platform" className="btn-secondary">
                 See how it works
@@ -244,7 +245,7 @@ export default function Home() {
             <div className="mt-8 flex flex-wrap gap-3">
               {[
                 "Built for strategy, growth, and leadership teams",
-                "Focused early rollout",
+                "Waitlist now open",
                 "Calm, decision-first product design",
               ].map((item) => (
                 <span
@@ -546,6 +547,8 @@ export default function Home() {
         </div>
       </section>
 
+      <FAQSection />
+
       <section className="relative overflow-hidden bg-[linear-gradient(180deg,#f7f9fc_0%,#ffffff_100%)] px-6 py-20 sm:py-24 lg:px-8 lg:py-28">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_10%_20%,rgba(53,99,235,0.12),transparent_20%),radial-gradient(circle_at_85%_80%,rgba(15,23,42,0.05),transparent_18%)]" />
         <div className="relative mx-auto max-w-[920px] text-center" data-story-reveal>
@@ -557,8 +560,8 @@ export default function Home() {
             Tell us what your team needs to track, assess, or decide. We&apos;ll show you how Stem can support that workflow.
           </p>
           <div className="mt-8 flex flex-col justify-center gap-4 sm:flex-row">
-            <Link href="/request-call" className="btn-primary">
-              Get early access <ArrowRight className="h-4 w-4" />
+            <Link href="/waitlist" className="btn-primary">
+              Join the waitlist <ArrowRight className="h-4 w-4" />
             </Link>
             <Link href="/platform" className="btn-secondary">
               Explore the platform

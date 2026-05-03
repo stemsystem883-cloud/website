@@ -1,43 +1,43 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, DM_Serif_Display } from "next/font/google";
+import { Inter, Newsreader } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { CursorFollower } from "@/components/CursorFollower";
 import { Analytics } from "@vercel/analytics/react";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const inter = Inter({
+  variable: "--font-inter",
   subsets: ["latin"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const newsreader = Newsreader({
+  variable: "--font-newsreader",
   subsets: ["latin"],
-});
-
-const dmSerifDisplay = DM_Serif_Display({
-  variable: "--font-serif",
-  subsets: ["latin"],
-  weight: "400",
+  weight: ["400", "500", "600", "700"],
 });
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://stem.africa"),
   title: {
-    default: "Stem | Decision Intelligence",
+    default: "Stem | Decision Intelligence & Business Intelligence Nigeria",
     template: "%s | Stem",
   },
   description:
-    "Stem helps fintech and financial-services companies and teams in Nigeria detect meaningful market changes early and act with more confidence, less guesswork, and less manual research.",
+    "Stem helps fintech and financial-services companies in Nigeria detect meaningful market changes early. The leading decision intelligence platform for Nigerian business growth and automated financial reporting.",
   keywords: [
-    "decision intelligence",
-    "market intelligence",
-    "fintech Nigeria",
-    "financial services",
-    "competitive intelligence",
-    "market monitoring",
-    "business intelligence Africa",
+    "Business intelligence platform Nigeria",
+    "fintech data analytics",
+    "decision intelligence software Africa",
+    "Nigerian financial market trends",
+    "real-time payment data Nigeria",
+    "fintech infrastructure providers Lagos",
+    "data-driven business growth",
+    "automated financial reporting tools",
+    "scaling fintech startups in Nigeria",
+    "NDPR compliant data platforms",
+    "secure fintech API Nigeria",
+    "AI-powered business insights",
   ],
   robots: { index: true, follow: true },
   icons: {
@@ -50,18 +50,36 @@ export const metadata: Metadata = {
     locale: "en_NG",
     url: "https://stem.africa",
     siteName: "Stem",
-    title: "Stem | Decision Intelligence",
+    title: "Stem | Business Intelligence Nigeria & Decision Intelligence",
     description:
-      "Stem helps fintech and financial-services companies and teams in Nigeria detect meaningful market changes early and act with more confidence.",
-    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Stem – Decision Intelligence" }],
+      "Detect meaningful market changes early and act with more confidence. The Stem-Cogent provides high-intent business intelligence for Nigerian fintechs.",
+    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Stem – Decision Intelligence Nigeria" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Stem | Decision Intelligence",
+    title: "Stem | Decision Intelligence Nigeria",
     description:
-      "Detect meaningful market changes early and act with more confidence.",
+      "Detect meaningful market changes early and act with more confidence with The Stem-Cogent.",
     images: ["/og-image.png"],
   },
+};
+
+const organizationSchema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Stem",
+  "url": "https://stem.africa",
+  "logo": "https://stem.africa/favicon.svg",
+  "description": "Stem helps fintech and financial-services companies in Nigeria detect meaningful market changes early and act with more confidence.",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Lagos",
+    "addressCountry": "NG"
+  },
+  "sameAs": [
+    "https://www.linkedin.com/in/alex-marco1820/",
+    "https://www.linkedin.com/in/gift-nduka/"
+  ]
 };
 
 export default function RootLayout({
@@ -72,8 +90,14 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} ${dmSerifDisplay.variable} h-full antialiased`}
+      className={`${inter.variable} ${newsreader.variable} h-full antialiased`}
     >
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+        />
+      </head>
       <body className="min-h-full flex flex-col selection:bg-primary-blue/10 selection:text-primary-blue">
         <CursorFollower />
         <Header />
