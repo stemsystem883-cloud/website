@@ -91,9 +91,9 @@ export default function CompanyFactsPage() {
           <section>
             <h2 className="text-2xl font-semibold text-deep-ink">Official Links</h2>
             <ul className="mt-4 space-y-2">
-              <li>Website: <a href="https://stem.africa" className="text-primary-blue hover:underline">https://stem.africa</a></li>
-              <li>About: <a href="https://stem.africa/about" className="text-primary-blue hover:underline">https://stem.africa/about</a></li>
-              <li>Platform: <a href="https://stem.africa/platform" className="text-primary-blue hover:underline">https://stem.africa/platform</a></li>
+              <li>Website: <a href="https://thestemgrid.com" className="text-primary-blue hover:underline">https://thestemgrid.com</a></li>
+              <li>About: <a href="https://thestemgrid.com/about" className="text-primary-blue hover:underline">https://thestemgrid.com/about</a></li>
+              <li>Platform: <a href="https://thestemgrid.com/platform" className="text-primary-blue hover:underline">https://thestemgrid.com/platform</a></li>
             </ul>
           </section>
         </div>

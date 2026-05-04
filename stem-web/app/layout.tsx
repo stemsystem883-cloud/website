@@ -18,7 +18,7 @@ const newsreader = Newsreader({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://stem.africa"),
+  metadataBase: new URL("https://thestemgrid.com"),
   title: {
     default: "Stem | Decision Intelligence & Business Intelligence Nigeria",
     template: "%s | Stem",
@@ -48,7 +48,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_NG",
-    url: "https://stem.africa",
+    url: "https://thestemgrid.com",
     siteName: "Stem",
     title: "Stem | Business Intelligence Nigeria & Decision Intelligence",
     description:
@@ -68,8 +68,8 @@ const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
   "name": "Stem",
-  "url": "https://stem.africa",
-  "logo": "https://stem.africa/favicon.svg",
+  "url": "https://thestemgrid.com",
+  "logo": "https://thestemgrid.com/favicon.svg",
   "description": "Stem helps fintech and financial-services companies in Nigeria detect meaningful market changes early and act with more confidence.",
   "address": {
     "@type": "PostalAddress",

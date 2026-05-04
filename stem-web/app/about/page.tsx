@@ -80,7 +80,7 @@ const personSchema = [
       "@type": "Organization",
       "name": "Stem"
     },
-    "url": "https://stem.africa/about",
+    "url": "https://thestemgrid.com/about",
     "sameAs": [
       "https://www.linkedin.com/in/alex-marco1820/"
     ],
@@ -95,7 +95,7 @@ const personSchema = [
       "@type": "Organization",
       "name": "Stem"
     },
-    "url": "https://stem.africa/about",
+    "url": "https://thestemgrid.com/about",
     "sameAs": [
       "https://www.linkedin.com/in/gift-nduka/"
     ],
@@ -241,7 +241,7 @@ export default function AboutPage() {
                         LinkedIn
                       </a>
                       <a
-                        href="mailto:placeholder@stem.africa"
+                        href="mailto:placeholder@thestemgrid.com"
                         className="inline-flex items-center gap-1.5 rounded-full border border-slate-200 bg-white/80 px-3 py-1.5 text-xs font-medium text-slate-700 transition-colors hover:border-primary-blue/30 hover:text-primary-blue"
                       >
                         <Mail className="h-3.5 w-3.5" />

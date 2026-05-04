@@ -4,44 +4,47 @@
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
-
+<!-- Updated manually for thestemgrid.com -->
 
 <url>
-  <loc>https://www.thestemgrid.com/</loc>
-  <lastmod>2026-05-03T06:04:38+00:00</lastmod>
+  <loc>https://thestemgrid.com/</loc>
+  <lastmod>2026-05-04T12:00:00+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
-  <loc>https://www.thestemgrid.com/platform</loc>
-  <lastmod>2026-05-03T06:04:38+00:00</lastmod>
+  <loc>https://thestemgrid.com/platform</loc>
+  <lastmod>2026-05-04T12:00:00+00:00</lastmod>
+  <priority>0.90</priority>
+</url>
+<url>
+  <loc>https://thestemgrid.com/solutions</loc>
+  <lastmod>2026-05-04T12:00:00+00:00</lastmod>
+  <priority>0.90</priority>
+</url>
+<url>
+  <loc>https://thestemgrid.com/use-cases</loc>
+  <lastmod>2026-05-04T12:00:00+00:00</lastmod>
+  <priority>0.85</priority>
+</url>
+<url>
+  <loc>https://thestemgrid.com/insights</loc>
+  <lastmod>2026-05-04T12:00:00+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://www.thestemgrid.com/solutions</loc>
-  <lastmod>2026-05-03T06:04:38+00:00</lastmod>
-  <priority>0.80</priority>
+  <loc>https://thestemgrid.com/about</loc>
+  <lastmod>2026-05-04T12:00:00+00:00</lastmod>
+  <priority>0.75</priority>
 </url>
 <url>
-  <loc>https://www.thestemgrid.com/use-cases</loc>
-  <lastmod>2026-05-03T06:04:38+00:00</lastmod>
-  <priority>0.80</priority>
+  <loc>https://thestemgrid.com/waitlist</loc>
+  <lastmod>2026-05-04T12:00:00+00:00</lastmod>
+  <priority>0.90</priority>
 </url>
 <url>
-  <loc>https://www.thestemgrid.com/insights</loc>
-  <lastmod>2026-05-03T06:04:38+00:00</lastmod>
-  <priority>0.80</priority>
+  <loc>https://thestemgrid.com/company-facts</loc>
+  <lastmod>2026-05-04T12:00:00+00:00</lastmod>
+  <priority>0.50</priority>
 </url>
-<url>
-  <loc>https://www.thestemgrid.com/about</loc>
-  <lastmod>2026-05-03T06:04:38+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.thestemgrid.com/waitlist</loc>
-  <lastmod>2026-05-03T06:04:38+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-
 
 </urlset>

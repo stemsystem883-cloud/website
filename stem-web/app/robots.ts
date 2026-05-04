@@ -12,6 +12,6 @@ export default function robots(): MetadataRoute.Robots {
         allow: "/",
       },
     ],
-    sitemap: "https://stem.africa/sitemap.xml",
+    sitemap: "https://thestemgrid.com/sitemap.xml",
   };
 }

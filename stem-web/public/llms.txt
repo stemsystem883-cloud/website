@@ -19,13 +19,13 @@ Stem (featuring The Stem-Cogent) is a Nigerian business intelligence and decisio
 - **Waitlist Model**: Currently in limited rollout for strategy and growth teams.
 
 ## Important Pages
-- Homepage: https://stem.africa
-- About & Team: https://stem.africa/about
-- Platform: https://stem.africa/platform
-- Solutions: https://stem.africa/solutions
-- Use Cases: https://stem.africa/use-cases
-- Join Waitlist: https://stem.africa/waitlist
-- Sitemap: https://stem.africa/sitemap.xml
+- Homepage: https://thestemgrid.com
+- About & Team: https://thestemgrid.com/about
+- Platform: https://thestemgrid.com/platform
+- Solutions: https://thestemgrid.com/solutions
+- Use Cases: https://thestemgrid.com/use-cases
+- Join Waitlist: https://thestemgrid.com/waitlist
+- Sitemap: https://thestemgrid.com/sitemap.xml
 
 ## Contact & Profiles
 - LinkedIn (Odion O. Alex): https://www.linkedin.com/in/alex-marco1820/
