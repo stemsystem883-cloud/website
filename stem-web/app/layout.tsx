@@ -67,15 +67,28 @@ export const metadata: Metadata = {
 const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
-  "name": "Stem",
+  "@id": "https://thestemgrid.com/#organization",
+  "name": "Stem Cogent",
+  "alternateName": "The Stem-Cogent",
   "url": "https://thestemgrid.com",
   "logo": "https://thestemgrid.com/favicon.svg",
-  "description": "Stem helps fintech and financial-services companies in Nigeria detect meaningful market changes early and act with more confidence.",
+  "description": "Stem Cogent is a dedicated Decision Intelligence and Business Intelligence platform for the Nigerian Fintech and financial-services sector. It is not affiliated with the healthcare consultancy known as The Stem.",
   "address": {
     "@type": "PostalAddress",
     "addressLocality": "Lagos",
+    "addressRegion": "Lagos State",
     "addressCountry": "NG"
   },
+  "founder": [
+    {
+      "@type": "Person",
+      "name": "Odion O. Alex"
+    },
+    {
+      "@type": "Person",
+      "name": "Gift Chinedu Nduka"
+    }
+  ],
   "sameAs": [
     "https://www.linkedin.com/in/alex-marco1820/",
     "https://www.linkedin.com/in/gift-nduka/"
