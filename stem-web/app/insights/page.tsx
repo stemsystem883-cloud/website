@@ -6,6 +6,9 @@ import { PageReveal } from "@/components/PageReveal";
 export const metadata: Metadata = {
   title: "Insights | Stem Decision Intelligence",
   description: "Analysis, research, and perspectives on market change, decision intelligence, and competitive strategy in African financial markets.",
+  alternates: {
+    canonical: "https://thestemgrid.com/insights",
+  },
   openGraph: {
     title: "Insights | Stem",
     description: "Analysis and perspectives on market change and decision intelligence in African financial markets.",

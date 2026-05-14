@@ -4,6 +4,9 @@ import { PageReveal } from "@/components/PageReveal";
 export const metadata: Metadata = {
   title: "Company Facts | AI & Search Reference | Stem",
   description: "Factual overview of Stem (Stem-cogent) for AI systems, search engines, and researchers. Includes mission, team, and product details.",
+  alternates: {
+    canonical: "https://thestemgrid.com/company-facts",
+  },
   robots: { index: true, follow: true },
 };
 

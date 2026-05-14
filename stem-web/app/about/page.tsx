@@ -17,6 +17,9 @@ export const metadata: Metadata = {
     "African decision intelligence",
     "market intelligence team",
   ],
+  alternates: {
+    canonical: "https://thestemgrid.com/about",
+  },
   openGraph: {
     title: "About Stem | Founding Team",
     description: "Built by Odion O. Alex and Gift Chinedu Nduka to help African fintech and financial-services companies move with clarity.",

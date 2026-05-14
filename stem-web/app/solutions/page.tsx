@@ -7,6 +7,9 @@ import { PageReveal } from "@/components/PageReveal";
 export const metadata: Metadata = {
   title: "Solutions | Stem Decision Intelligence",
   description: "How Stem supports strategy, growth, and risk decisions in fast-moving markets.",
+  alternates: {
+    canonical: "https://thestemgrid.com/solutions",
+  },
   openGraph: {
     title: "Solutions | Stem",
     description: "How Stem supports strategy, growth, and risk decisions in fast-moving markets.",

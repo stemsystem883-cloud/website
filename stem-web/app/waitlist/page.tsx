@@ -6,6 +6,9 @@ import { PageReveal } from "@/components/PageReveal";
 export const metadata: Metadata = {
   title: "Join the Waitlist | Stem",
   description: "Join the waitlist for Stem and be the first to know when we launch.",
+  alternates: {
+    canonical: "https://thestemgrid.com/waitlist",
+  },
   openGraph: {
     title: "Join the Waitlist | Stem",
     description: "Join the waitlist for Stem and be the first to know when we launch.",

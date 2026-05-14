@@ -6,6 +6,9 @@ import { PageReveal } from "@/components/PageReveal";
 export const metadata: Metadata = {
   title: "Use Cases | Stem Decision Intelligence",
   description: "How fintech/financial companies and  teams uses Stem-cogent to track change, reduce guesswork, and move faster.",
+  alternates: {
+    canonical: "https://thestemgrid.com/use-cases",
+  },
   openGraph: {
     title: "Use Cases | Stem",
     description: "How fintech/financial companies and  teams use Stem-cogent to track change, reduce guesswork, and move faster.",

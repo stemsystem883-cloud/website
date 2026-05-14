@@ -7,6 +7,9 @@ import { PageReveal } from "@/components/PageReveal";
 export const metadata: Metadata = {
   title: "Platform | Stem Decision Intelligence",
   description: "See how Stem-cogent monitors markets, tracks competitors, and surfaces the signals that matter for financial teams in Nigeria.",
+  alternates: {
+    canonical: "https://thestemgrid.com/platform",
+  },
   openGraph: {
     title: "Platform | Stem",
     description: "See how Stem-cogent monitors markets, tracks competitors, and surfaces the signals that matter.",
