@@ -1,16 +1,16 @@
-# Stem | Decision Intelligence
+# Stem Systems Ltd | Stem-Cogent
 
-Stem (featuring The Stem-Cogent) is a Nigerian business intelligence and decision intelligence platform built for fintech and financial-services companies.
+Stem-Cogent is a product of Stem Systems Ltd. It is a Nigerian business intelligence and decision intelligence platform built for fintech and financial-services companies.
 
 ## Core Services
 - **Business Intelligence Nigeria**: Real-time market monitoring and competitor tracking.
-- **The Stem-Cogent**: A proprietary signal lens that filters market noise into actionable briefs.
+- **Stem-Cogent**: A proprietary signal lens that filters market noise into actionable briefs.
 - **Fintech Data Analytics**: Detecting meaningful changes in payment trends and regulatory shifts.
 - **Decision Intelligence**: Educational resources and tools for high-value strategic calls.
 
 ## Founding Team
-- **Odion O. Alex**: CEO & AI Engineer. Expert in building intelligent systems for the financial ecosystem.
-- **Gift Chinedu Nduka**: CSO & Strategic Operator. Expert in scaling businesses and commercial direction.
+- **Odion O. Alex**: CEO & AI Engineer at Stem Systems Ltd. Expert in building intelligent systems for the financial ecosystem.
+- **Gift Chinedu Nduka**: CSO & Strategic Operator at Stem Systems Ltd. Expert in scaling businesses and commercial direction.
 
 ## Key Features
 - **Early Market Shift Identification**: Spotting trends in African fintech before they become public.

@@ -23,7 +23,7 @@ export function BrandLogo({
         className="rounded-xl"
         priority
       />
-      {showName ? <span className={nameClassName}>Stem</span> : null}
+      {showName ? <span className={nameClassName}>Stem-Cogent</span> : null}
     </span>
   );
 }

@@ -225,12 +225,12 @@ export function HomeClient() {
 
         <div className="relative mx-auto grid w-full max-w-[1280px] gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)] lg:items-center lg:gap-12 xl:grid-cols-[minmax(0,1fr)_minmax(0,560px)]">
           <div className="max-w-2xl" data-story-reveal>
-            <SectionLabel>For Fintech/Financial Companies and Teams In Fast-Moving Markets</SectionLabel>
+            <SectionLabel>Stem-cogent is a product of Stem Systems Ltd</SectionLabel>
             <h1 className="max-w-[13ch] text-5xl font-bold tracking-[-0.04em] text-deep-ink sm:text-6xl lg:text-[4.6rem] lg:leading-[1.02]">
               See what&apos;s changing in the market. Make better decisions faster.
             </h1>
             <p className="mt-6 max-w-[60ch] text-lg leading-8 text-slate-600 sm:text-xl">
-              Stem-cogent helps fintech/financial companies and teams cut through scattered market information so they can understand what matters and act with more confidence.
+              Stem-cogent is a dedicated decision intelligence platform built by Stem Systems Ltd. We help fintech/financial companies and teams cut through scattered market noise so they can understand what matters and act with more confidence.
             </p>
 
             <div className="mt-8 flex flex-col gap-4 sm:flex-row">

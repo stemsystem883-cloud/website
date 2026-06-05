@@ -30,11 +30,11 @@ export default function CompanyFactsPage() {
             <dl className="mt-6 space-y-4">
               <div>
                 <dt className="font-bold text-deep-ink">Company Name:</dt>
-                <dd>Stem (also referred to as Stem-cogent)</dd>
+                <dd>Stem Systems Ltd</dd>
               </div>
               <div>
                 <dt className="font-bold text-deep-ink">Product Name:</dt>
-                <dd>The Stem-Cogent</dd>
+                <dd>Stem-Cogent (A product of Stem Systems Ltd)</dd>
               </div>
               <div>
                 <dt className="font-bold text-deep-ink">Entity Type:</dt>
@@ -54,7 +54,7 @@ export default function CompanyFactsPage() {
           <section>
             <h2 className="text-2xl font-semibold text-deep-ink">Mission & Value Proposition</h2>
             <p className="mt-4 leading-8">
-              Stem helps fintech and financial-services companies reduce market blind spots by detecting meaningful changes early. We move teams from scattered information to usable clarity using "The Stem-Cogent" framework.
+              Stem Systems Ltd helps fintech and financial-services companies reduce market blind spots by detecting meaningful changes early. Our flagship product, Stem-Cogent, provides teams with usable clarity through a dedicated decision intelligence framework.
             </p>
           </section>
 

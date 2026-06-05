@@ -63,17 +63,17 @@ export const metadata: Metadata = {
     images: ["/og-image.png"],
   },
 };
-
 const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
   "@id": "https://thestemgrid.com/#organization",
-  "name": "Stem Cogent",
-  "alternateName": "The Stem-Cogent",
+  "name": "Stem Systems Ltd",
+  "alternateName": "Stem-Cogent",
   "url": "https://thestemgrid.com",
   "logo": "https://thestemgrid.com/favicon.svg",
-  "description": "Stem Cogent is a dedicated Decision Intelligence and Business Intelligence platform for the Nigerian Fintech and financial-services sector. It is not affiliated with the healthcare consultancy known as The Stem.",
-  "address": {
+  "description": "Stem Systems Ltd is the entity building Stem-Cogent, a dedicated Decision Intelligence and Business Intelligence platform for the Nigerian Fintech and financial-services sector.",
+  "sameAs": [],
+};
     "@type": "PostalAddress",
     "addressLocality": "Lagos",
     "addressRegion": "Lagos State",

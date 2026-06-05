@@ -10,7 +10,7 @@ export function Footer() {
             <BrandLogo size={38} />
           </Link>
           <p className="mt-4 max-w-md text-sm leading-7 text-slate-600">
-            Stem helps companies, teams, and decision makers know what matters, less guesswork, see what changing decide faster with confidence.
+            Stem-cogent is a product of Stem Systems Ltd. We help companies, teams, and decision makers know what matters, reduce guesswork, and decide with more confidence.
           </p>
         </div>
         <div>
@@ -31,7 +31,7 @@ export function Footer() {
         </div>
       </div>
       <div className="mx-auto mt-12 flex max-w-[1280px] items-center justify-between border-t border-slate-200 pt-8 text-sm text-slate-500">
-        <p>&copy; {new Date().getFullYear()} Stem. All rights reserved.</p>
+        <p>&copy; {new Date().getFullYear()} Stem Systems Ltd. Stem-Cogent is a product of Stem Systems Ltd. All rights reserved.</p>
       </div>
     </footer>
   );

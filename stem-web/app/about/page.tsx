@@ -81,13 +81,13 @@ const personSchema = [
     "jobTitle": "Co-Founder and CEO",
     "affiliation": {
       "@type": "Organization",
-      "name": "Stem"
+      "name": "Stem Systems Ltd"
     },
     "url": "https://thestemgrid.com/about",
     "sameAs": [
       "https://www.linkedin.com/in/alex-marco1820/"
     ],
-    "description": "An entrepreneur, AI engineer, and innovative builder driven by a passion to create intelligent systems."
+    "description": "An entrepreneur, AI engineer, and innovative builder driven by a passion to create intelligent systems at Stem Systems Ltd."
   },
   {
     "@context": "https://schema.org",
@@ -96,13 +96,13 @@ const personSchema = [
     "jobTitle": "Co-Founder and CSO",
     "affiliation": {
       "@type": "Organization",
-      "name": "Stem"
+      "name": "Stem Systems Ltd"
     },
     "url": "https://thestemgrid.com/about",
     "sameAs": [
       "https://www.linkedin.com/in/gift-nduka/"
     ],
-    "description": "A strategic operator with the skills to build and scale businesses, focused on shaping a sharper commercial direction for Stem."
+    "description": "A strategic operator with the skills to build and scale businesses, focused on shaping a sharper commercial direction for Stem Systems Ltd."
   }
 ];
 
@@ -121,9 +121,9 @@ export default function AboutPage() {
       <section className="relative overflow-hidden px-6 py-20 sm:py-24 lg:px-8 lg:py-28">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(53,99,235,0.12),transparent_30%),linear-gradient(180deg,#ffffff_0%,#f7faff_100%)]" />
         <div className="relative mx-auto max-w-[980px] text-center" data-reveal>
-          <SectionLabel>About Stem-Cogent</SectionLabel>
+          <SectionLabel>Stem Systems Ltd & Stem-Cogent</SectionLabel>
           <h1 className="text-4xl font-bold tracking-[-0.04em] text-deep-ink sm:text-5xl lg:text-[4.2rem] lg:leading-[1.04]">
-            Built for decision makers and teams making important decisions in companies and fast-moving markets.
+            Stem Systems Ltd is the entity building Stem-Cogent.
           </h1>
           <p className="mx-auto mt-6 max-w-[46ch] text-lg leading-8 text-slate-600 sm:text-xl">
             Stem-cogent exists to help fintech and financial teams reduce blind spots, cut through fragmented signals, and make business decisions with more confidence.
@@ -134,16 +134,16 @@ export default function AboutPage() {
       <section className="bg-white px-6 py-20 sm:py-24 lg:px-8 lg:py-28">
         <div className="mx-auto grid max-w-[1280px] gap-8 lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)] lg:items-start">
           <div className="rounded-[30px] border border-slate-200 bg-[linear-gradient(180deg,#ffffff_0%,#f7f9fc_100%)] p-7 shadow-[0_18px_44px_rgba(15,23,42,0.06)]" data-reveal>
-            <SectionLabel>Why We Built Stem-cogent</SectionLabel>
+            <SectionLabel>Our Mission</SectionLabel>
             <h2 className="text-3xl font-bold tracking-[-0.04em] text-deep-ink sm:text-4xl lg:text-5xl">
               Important market decisions are still made with incomplete visibility.
             </h2>
             <div className="mt-6 space-y-5 text-base leading-8 text-slate-600">
               <p>
-                Strategy, growth, and leadership teams often work across fragmented market information. Signals live in different places, change at different speeds, and rarely arrive in a form that is easy to discuss.
+                Stem Systems Ltd was founded to solve a specific problem: strategy, growth, and leadership teams often work across fragmented market information. Signals live in different places, change at different speeds, and rarely arrive in a form that is easy to discuss.
               </p>
               <p>
-                We built Stem-cogent because more raw information is not the answer. Leaders, innovative teams need usable clarity. They need to know what changed, why it matters, and what deserves attention now.
+                We built Stem-cogent because more raw information is not the answer. Leaders and innovative teams need usable clarity. They need to know what changed, why it matters, and what deserves attention now.
               </p>
             </div>
           </div>
