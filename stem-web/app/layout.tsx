@@ -72,8 +72,7 @@ const organizationSchema = {
   "url": "https://thestemgrid.com",
   "logo": "https://thestemgrid.com/favicon.svg",
   "description": "Stem Systems Ltd is the entity building Stem-Cogent, a dedicated Decision Intelligence and Business Intelligence platform for the Nigerian Fintech and financial-services sector.",
-  "sameAs": [],
-};
+  "address": {
     "@type": "PostalAddress",
     "addressLocality": "Lagos",
     "addressRegion": "Lagos State",
