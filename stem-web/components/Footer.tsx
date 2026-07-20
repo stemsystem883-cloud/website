@@ -1,38 +1,3 @@
 import Link from "next/link";
 import { BrandLogo } from "@/components/BrandLogo";
-
-export function Footer() {
-  return (
-    <footer className="mt-auto border-t border-slate-200 bg-[#fbfcff] px-6 py-14 text-slate-600 lg:px-8">
-      <div className="mx-auto grid max-w-[1280px] grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-4">
-        <div className="col-span-1 sm:col-span-2 md:col-span-2">
-          <Link href="/" className="inline-flex items-center">
-            <BrandLogo size={38} />
-          </Link>
-          <p className="mt-4 max-w-md text-sm leading-7 text-slate-600">
-            Stem-cogent is a product of Stem Systems Ltd. We help companies, teams, and decision makers know what matters, reduce guesswork, and decide with more confidence.
-          </p>
-        </div>
-        <div>
-          <h4 className="font-semibold text-deep-ink mb-4">Product</h4>
-          <ul className="space-y-3 text-sm">
-            <li><Link href="/platform" className="hover:text-primary-blue link-underline">Platform</Link></li>
-            <li><Link href="/solutions" className="hover:text-primary-blue link-underline">Solutions</Link></li>
-            <li><Link href="/use-cases" className="hover:text-primary-blue link-underline">Use Cases</Link></li>
-          </ul>
-        </div>
-        <div>
-          <h4 className="font-semibold text-deep-ink mb-4">Company</h4>
-          <ul className="space-y-3 text-sm">
-            <li><Link href="/about" className="hover:text-primary-blue link-underline">About</Link></li>
-            <li><Link href="/insights" className="hover:text-primary-blue link-underline">Insights</Link></li>
-            <li><Link href="/waitlist" className="hover:text-primary-blue link-underline">Join the waitlist</Link></li>
-          </ul>
-        </div>
-      </div>
-      <div className="mx-auto mt-12 flex max-w-[1280px] items-center justify-between border-t border-slate-200 pt-8 text-sm text-slate-500">
-        <p>&copy; {new Date().getFullYear()} Stem Systems Ltd. Stem-Cogent is a product of Stem Systems Ltd. All rights reserved.</p>
-      </div>
-    </footer>
-  );
-}
+export function Footer() { return <footer className="bg-[#050b1c] text-white"><div className="site-shell grid gap-10 py-10 md:grid-cols-[1fr_auto_1fr] md:items-end"><div><BrandLogo size={32} nameClassName="font-serif text-xl text-white" className="gap-3" /><p className="mt-4 max-w-[30ch] text-xs leading-5 text-white/50">Decision intelligence for African financial services.</p></div><nav className="flex gap-6 text-xs text-white/60"><Link href="/platform" className="hover:text-white">Platform</Link><Link href="/about" className="hover:text-white">About</Link><Link href="/waitlist" className="hover:text-white">Join waitlist</Link></nav><p className="text-left text-xs text-white/45 md:text-right">2026 Stem System Ltd.</p></div></footer>; }

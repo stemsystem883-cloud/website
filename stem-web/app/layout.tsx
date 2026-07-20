@@ -3,7 +3,7 @@ import { Inter, Newsreader } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
-import { CursorFollower } from "@/components/CursorFollower";
+import { SiteMotion } from "@/components/SiteMotion";
 import { Analytics } from "@vercel/analytics/react";
 
 const inter = Inter({
@@ -20,11 +20,11 @@ const newsreader = Newsreader({
 export const metadata: Metadata = {
   metadataBase: new URL("https://thestemgrid.com"),
   title: {
-    default: "Stem | Decision Intelligence & Business Intelligence Nigeria",
-    template: "%s | Stem",
+    default: "Stem Cogent | Decision Intelligence for African Finance",
+    template: "%s | Stem Cogent",
   },
   description:
-    "Stem helps fintech and financial-services companies in Nigeria detect meaningful market changes early. The leading decision intelligence platform for Nigerian business growth and automated financial reporting.",
+    "Nigeria-first decision intelligence for fintech and financial-services leaders.",
   keywords: [
     "Business intelligence platform Nigeria",
     "fintech data analytics",
@@ -49,8 +49,8 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_NG",
     url: "https://thestemgrid.com",
-    siteName: "Stem",
-    title: "Stem | Business Intelligence Nigeria & Decision Intelligence",
+    siteName: "Stem Cogent",
+    title: "Stem Cogent | Decision Intelligence for African Finance",
     description:
       "Detect meaningful market changes early and act with more confidence. The Stem-Cogent provides high-intent business intelligence for Nigerian fintechs.",
     images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Stem – Decision Intelligence Nigeria" }],
@@ -111,8 +111,8 @@ export default function RootLayout({
         />
       </head>
       <body className="min-h-full flex flex-col selection:bg-primary-blue/10 selection:text-primary-blue">
-        <CursorFollower />
         <Header />
+        <SiteMotion />
         <main className="flex-1 page-enter">{children}</main>
         <Footer />
         <Analytics />
